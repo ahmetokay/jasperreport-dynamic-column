@@ -19,7 +19,9 @@ public class ReportController {
 
     @GetMapping(value = "/export")
     public void export(HttpServletResponse response) throws JRException {
-        List<List<Object>> dummyList = dummyService.createDummyList(20);
-        ExportUtils.exportYeni(Arrays.asList("name", "description"), dummyList, response);
+        int headerCount = 5, rowCount = 30;
+        List<String> dummyHeaderList = dummyService.createDummyHeaderList(headerCount);
+        List<List<Object>> dummyDataList = dummyService.createDummyList(headerCount, rowCount);
+        ExportUtils.exportYeni(dummyHeaderList, dummyDataList, response);
     }
 }
