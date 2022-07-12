@@ -17,8 +17,6 @@
 	<parameter name="gnlGrpName" class="java.lang.String"/>
 	<parameter name="prohibRsnTpId" class="java.lang.String"/>
 	<parameter name="prohibRsnTpName" class="java.lang.String"/>
-	<parameter name="prohibUpdRsnTpId" class="java.lang.String"/>
-	<parameter name="prohibUpdRsnTpName" class="java.lang.String"/>
 	<parameter name="stId" class="java.lang.String"/>
 	<parameter name="stName" class="java.lang.String"/>
 	<parameter name="name" class="java.lang.String"/>

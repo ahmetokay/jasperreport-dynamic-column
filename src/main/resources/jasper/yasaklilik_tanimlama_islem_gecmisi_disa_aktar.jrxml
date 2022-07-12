@@ -23,7 +23,6 @@
 	<field name="uuser" class="java.lang.Long"/>
 	<field name="descr" class="java.lang.String"/>
 	<field name="assignStatusName" class="java.lang.String"/>
-	<field name="prohibUpdRsnTpName" class="java.lang.String"/>
 	<field name="prohibRsnTpName" class="java.lang.String"/>
 	<field name="ilgiliMevzuatlar" class="java.lang.String"/>
 	<field name="ilgiliSurecler" class="java.lang.String"/>
@@ -267,20 +266,7 @@
 				<text><![CDATA[Yasaklılık Nedeni]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1200" y="20" width="77" height="60" backcolor="#CCCCCC" uuid="8037e5f7-75ff-4982-8950-9fb3abaff15a"/>
-				<box>
-					<topPen lineWidth="0.25"/>
-					<leftPen lineWidth="0.25"/>
-					<bottomPen lineWidth="0.25"/>
-					<rightPen lineWidth="0.25"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
-				</textElement>
-				<text><![CDATA[Güncelleme Nedeni]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="1277" y="20" width="63" height="60" backcolor="#CCCCCC" uuid="7c11fcce-6de1-424a-8661-18164fe62b3f"/>
+				<reportElement mode="Opaque" x="1200" y="20" width="63" height="60" backcolor="#CCCCCC" uuid="7c11fcce-6de1-424a-8661-18164fe62b3f"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -293,7 +279,7 @@
 				<text><![CDATA[Açıklama]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1340" y="20" width="63" height="60" backcolor="#CCCCCC" uuid="f44b7fc6-8b19-413c-b872-bf0ebfd08e82"/>
+				<reportElement mode="Opaque" x="1263" y="20" width="63" height="60" backcolor="#CCCCCC" uuid="f44b7fc6-8b19-413c-b872-bf0ebfd08e82"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -306,7 +292,7 @@
 				<text><![CDATA[İlgili Kararlar]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1403" y="20" width="63" height="60" backcolor="#CCCCCC" uuid="445bf977-9e8a-4ee8-838d-ab2c99a47bc7"/>
+				<reportElement mode="Opaque" x="1326" y="20" width="63" height="60" backcolor="#CCCCCC" uuid="445bf977-9e8a-4ee8-838d-ab2c99a47bc7"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -319,7 +305,7 @@
 				<text><![CDATA[İlgili Filtreler]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1466" y="20" width="63" height="60" backcolor="#CCCCCC" uuid="15f0267b-9541-4d8e-a293-c6826d3fde0a"/>
+				<reportElement mode="Opaque" x="1389" y="20" width="63" height="60" backcolor="#CCCCCC" uuid="15f0267b-9541-4d8e-a293-c6826d3fde0a"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -332,7 +318,7 @@
 				<text><![CDATA[İlgili Mevzuatlar]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1529" y="20" width="63" height="60" backcolor="#CCCCCC" uuid="7ebc215e-4e20-489b-bac9-d4b11e98997e"/>
+				<reportElement mode="Opaque" x="1452" y="20" width="63" height="60" backcolor="#CCCCCC" uuid="7ebc215e-4e20-489b-bac9-d4b11e98997e"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -345,7 +331,7 @@
 				<text><![CDATA[İlgili Süreçler]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="0" width="1592" height="20" forecolor="#F20000" uuid="d29495ca-9e3c-48ca-9608-21cca8732340"/>
+				<reportElement x="0" y="0" width="1515" height="20" forecolor="#F20000" uuid="d29495ca-9e3c-48ca-9608-21cca8732340"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Yasaklılık Tanımlama Listesi]]></text>
 			</staticText>
@@ -588,20 +574,7 @@
 				<textFieldExpression><![CDATA[$F{prohibRsnTpName}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1200" y="-28" width="77" height="30" uuid="280408f0-5aeb-434b-aef1-96b6622e5be5"/>
-				<box>
-					<topPen lineWidth="0.25"/>
-					<leftPen lineWidth="0.25"/>
-					<bottomPen lineWidth="0.25"/>
-					<rightPen lineWidth="0.25"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" pdfEncoding="Cp1254"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{prohibUpdRsnTpName}]]></textFieldExpression>
-			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1277" y="-28" width="63" height="30" uuid="5e66c7ad-5b79-43cc-80c1-73db9fd8b6e1"/>
+				<reportElement stretchType="RelativeToBandHeight" x="1200" y="-28" width="63" height="30" uuid="5e66c7ad-5b79-43cc-80c1-73db9fd8b6e1"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -614,7 +587,7 @@
 				<textFieldExpression><![CDATA[$F{descr}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1340" y="-28" width="63" height="30" uuid="054f6d86-d0bb-4039-b301-1a723057cd5a"/>
+				<reportElement stretchType="RelativeToBandHeight" x="1263" y="-28" width="63" height="30" uuid="054f6d86-d0bb-4039-b301-1a723057cd5a"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -627,7 +600,7 @@
 				<textFieldExpression><![CDATA[$F{ilgiliKararlar}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1403" y="-28" width="63" height="30" uuid="c70d4741-9664-41d7-88f5-9d4a979f6d61"/>
+				<reportElement stretchType="RelativeToBandHeight" x="1326" y="-28" width="63" height="30" uuid="c70d4741-9664-41d7-88f5-9d4a979f6d61"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -640,7 +613,7 @@
 				<textFieldExpression><![CDATA[$F{ilgiliFiltreler}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1466" y="-28" width="63" height="30" uuid="5de7aea3-6040-4e5d-9eb4-9d95e8ac0828"/>
+				<reportElement stretchType="RelativeToBandHeight" x="1389" y="-28" width="63" height="30" uuid="5de7aea3-6040-4e5d-9eb4-9d95e8ac0828"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -653,7 +626,7 @@
 				<textFieldExpression><![CDATA[$F{ilgiliMevzuatlar}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1529" y="-28" width="63" height="30" uuid="cd6cd42f-0ded-47d7-81d8-8bdca5aa8b22"/>
+				<reportElement stretchType="RelativeToBandHeight" x="1452" y="-28" width="63" height="30" uuid="cd6cd42f-0ded-47d7-81d8-8bdca5aa8b22"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>

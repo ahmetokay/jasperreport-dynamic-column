@@ -11,8 +11,6 @@
 	<parameter name="roleTpName" class="java.lang.String"/>
 	<parameter name="gnlGrpId" class="java.lang.String"/>
 	<parameter name="gnlGrpName" class="java.lang.String"/>
-	<parameter name="updRsnTpId" class="java.lang.String"/>
-	<parameter name="updRsnTpName" class="java.lang.String"/>
 	<parameter name="stId" class="java.lang.String"/>
 	<parameter name="stName" class="java.lang.String"/>
 	<parameter name="name" class="java.lang.String"/>

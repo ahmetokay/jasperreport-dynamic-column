@@ -9,8 +9,6 @@
 	<field name="roleTpName" class="java.lang.String"/>
 	<field name="gnlGrpId" class="java.lang.String"/>
 	<field name="gnlGrpName" class="java.lang.String"/>
-	<field name="updRsnTpId" class="java.lang.String"/>
-	<field name="updRsnTpName" class="java.lang.String"/>
 	<field name="stId" class="java.lang.String"/>
 	<field name="stName" class="java.lang.String"/>
 	<field name="name" class="java.lang.String"/>

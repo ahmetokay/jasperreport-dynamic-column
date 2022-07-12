@@ -17,8 +17,6 @@
 	<parameter name="gnlGrpName" class="java.lang.String"/>
 	<parameter name="prohibRsnTpId" class="java.lang.String"/>
 	<parameter name="prohibRsnTpName" class="java.lang.String"/>
-	<parameter name="prohibUpdRsnTpId" class="java.lang.String"/>
-	<parameter name="prohibUpdRsnTpName" class="java.lang.String"/>
 	<parameter name="stId" class="java.lang.String"/>
 	<parameter name="stName" class="java.lang.String"/>
 	<parameter name="name" class="java.lang.String"/>
@@ -91,16 +89,8 @@
 				</textElement>
 				<text><![CDATA[Son Güncelleme Tarihi]]></text>
 			</staticText>
-			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="384" width="124" height="20" backcolor="#FFFFFF" uuid="a7c0066d-ccd1-4bd4-a7ee-b40dffeb3969"/>
-				<box leftPadding="2"/>
-				<textElement verticalAlignment="Middle">
-					<font size="7" pdfEncoding="Cp1254"/>
-				</textElement>
-				<text><![CDATA[Güncelleme Nedeni]]></text>
-			</staticText>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="129" y="504" width="426" height="20" uuid="5d2eb027-48af-4849-8cf7-c8ea568f793a"/>
+				<reportElement stretchType="RelativeToBandHeight" x="129" y="484" width="426" height="20" uuid="5d2eb027-48af-4849-8cf7-c8ea568f793a"/>
 				<box leftPadding="0"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -108,7 +98,7 @@
 				<textFieldExpression><![CDATA[$P{surecAdi}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="404" width="124" height="20" backcolor="#FFFFFF" uuid="d3ead4f2-d77b-4021-9f89-dcd708495d3f"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="384" width="124" height="20" backcolor="#FFFFFF" uuid="d3ead4f2-d77b-4021-9f89-dcd708495d3f"/>
 				<box leftPadding="2"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -116,7 +106,7 @@
 				<text><![CDATA[Yasaklılık Statüsü]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="424" width="124" height="20" backcolor="#FFFFFF" uuid="6be86012-9fc3-4474-a4df-5f9ad812294c"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="404" width="124" height="20" backcolor="#FFFFFF" uuid="6be86012-9fc3-4474-a4df-5f9ad812294c"/>
 				<box leftPadding="2"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -124,7 +114,7 @@
 				<text><![CDATA[Yasaklılık Giriş Filtre]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="484" width="124" height="20" backcolor="#FFFFFF" uuid="e8eb12dc-64d8-408d-9cd6-7aa1c523764f"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="464" width="124" height="20" backcolor="#FFFFFF" uuid="e8eb12dc-64d8-408d-9cd6-7aa1c523764f"/>
 				<box leftPadding="2"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -132,7 +122,7 @@
 				<text><![CDATA[İlgili Süreç]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="444" width="124" height="20" backcolor="#FFFFFF" uuid="f39a8732-20dd-428a-bfdf-acf52893079b"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="424" width="124" height="20" backcolor="#FFFFFF" uuid="f39a8732-20dd-428a-bfdf-acf52893079b"/>
 				<box leftPadding="2"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -140,7 +130,7 @@
 				<text><![CDATA[İlgili Mevzuat Dayanağı]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="464" width="124" height="20" backcolor="#FFFFFF" uuid="b8a2dbcd-b050-41d3-8678-5688cbd30582"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="444" width="124" height="20" backcolor="#FFFFFF" uuid="b8a2dbcd-b050-41d3-8678-5688cbd30582"/>
 				<box leftPadding="2"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -148,7 +138,7 @@
 				<text><![CDATA[İlhgili Mahkeme/Komisyon Kararı]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="504" width="124" height="20" backcolor="#FFFFFF" uuid="08e7c408-1ca7-4540-9c91-b0216355cc82"/>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="484" width="124" height="20" backcolor="#FFFFFF" uuid="08e7c408-1ca7-4540-9c91-b0216355cc82"/>
 				<box leftPadding="2"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -187,24 +177,16 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{descr}]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="129" y="364" width="426" height="20" uuid="20abc063-290c-429c-8504-a286dfa0eba6"/>
 				<box leftPadding="0"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new SimpleDateFormat("dd.MM.yyyy").format($P{udate})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{udate}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="129" y="384" width="426" height="20" uuid="3990abd8-b688-4254-9f68-8bd37af17bb1"/>
-				<box leftPadding="0"/>
-				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font size="7" pdfEncoding="Cp1254"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{prohibUpdRsnTpName}]]></textFieldExpression>
-			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="129" y="404" width="426" height="20" uuid="828727d9-a4c2-446f-96bd-2d255b8abc5a"/>
+				<reportElement stretchType="RelativeToBandHeight" x="129" y="384" width="426" height="20" uuid="828727d9-a4c2-446f-96bd-2d255b8abc5a"/>
 				<box leftPadding="0"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -212,7 +194,7 @@
 				<textFieldExpression><![CDATA[$P{stName}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="129" y="484" width="426" height="20" uuid="b4a4a17e-35f3-459a-9af3-54b9d70f19b4"/>
+				<reportElement stretchType="RelativeToBandHeight" x="129" y="464" width="426" height="20" uuid="b4a4a17e-35f3-459a-9af3-54b9d70f19b4"/>
 				<box leftPadding="0"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -220,7 +202,7 @@
 				<textFieldExpression><![CDATA[$P{surec}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="129" y="424" width="426" height="20" uuid="0ecd2b96-05a3-4d70-b4e5-f15f1ae2ecc7"/>
+				<reportElement stretchType="RelativeToBandHeight" x="129" y="404" width="426" height="20" uuid="0ecd2b96-05a3-4d70-b4e5-f15f1ae2ecc7"/>
 				<box leftPadding="0"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -228,7 +210,7 @@
 				<textFieldExpression><![CDATA[$P{filtre}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="129" y="444" width="426" height="20" isPrintWhenDetailOverflows="true" uuid="4559e545-ddce-4c6f-9702-03cc40be58e1"/>
+				<reportElement stretchType="RelativeToTallestObject" x="129" y="424" width="426" height="20" isPrintWhenDetailOverflows="true" uuid="4559e545-ddce-4c6f-9702-03cc40be58e1"/>
 				<box leftPadding="0"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -236,7 +218,7 @@
 				<textFieldExpression><![CDATA[$P{mevzuat}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="129" y="464" width="426" height="20" uuid="df3feaea-79c4-44c7-8a08-cd1a72d48d4e"/>
+				<reportElement stretchType="RelativeToBandHeight" x="129" y="444" width="426" height="20" uuid="df3feaea-79c4-44c7-8a08-cd1a72d48d4e"/>
 				<box leftPadding="0"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
@@ -259,7 +241,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="124" y="404" width="5" height="20" uuid="b9586c81-7fd5-4ea9-9cab-fd90a38945ba"/>
+				<reportElement x="124" y="384" width="5" height="20" uuid="b9586c81-7fd5-4ea9-9cab-fd90a38945ba"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<text><![CDATA[:]]></text>
 			</staticText>
@@ -274,32 +256,27 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="124" y="384" width="5" height="20" uuid="8fc879b1-6554-41b0-8c3d-290a8e239c6a"/>
+				<reportElement x="124" y="404" width="5" height="20" uuid="de485ac1-0729-4967-8a75-b1365e1a3132"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="124" y="424" width="5" height="20" uuid="de485ac1-0729-4967-8a75-b1365e1a3132"/>
+				<reportElement x="124" y="424" width="5" height="20" uuid="358252ce-6268-4d7c-9eaa-25483dc7a2da"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="124" y="444" width="5" height="20" uuid="358252ce-6268-4d7c-9eaa-25483dc7a2da"/>
+				<reportElement x="124" y="444" width="5" height="20" uuid="ae88d267-1c19-4956-b32b-cedb5241d9c8"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="124" y="464" width="5" height="20" uuid="ae88d267-1c19-4956-b32b-cedb5241d9c8"/>
+				<reportElement x="124" y="464" width="5" height="20" uuid="5c014fa2-836e-40b9-9205-ac888d3d0c5d"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="124" y="484" width="5" height="20" uuid="5c014fa2-836e-40b9-9205-ac888d3d0c5d"/>
-				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
-				<text><![CDATA[:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="124" y="504" width="5" height="20" uuid="e72c134c-7b14-4683-9e3d-6a798d2c3477"/>
+				<reportElement x="124" y="484" width="5" height="20" uuid="e72c134c-7b14-4683-9e3d-6a798d2c3477"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<text><![CDATA[:]]></text>
 			</staticText>
@@ -399,21 +376,21 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{prohibWrkTpName}]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="129" y="244" width="426" height="20" uuid="b0970e98-63d2-4e7f-a363-75f26a8d74c8"/>
 				<box leftPadding="0"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new SimpleDateFormat("dd.MM.yyyy").format($P{sdate})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{sdate}]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="129" y="264" width="426" height="20" uuid="99be7859-806a-48e2-a95a-30575baabf17"/>
 				<box leftPadding="0"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="7" pdfEncoding="Cp1254"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new SimpleDateFormat("dd.MM.yyyy").format($P{edate})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{edate}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="124" y="144" width="5" height="20" uuid="b6d0fc38-408c-46e3-a331-b9c724766357"/>

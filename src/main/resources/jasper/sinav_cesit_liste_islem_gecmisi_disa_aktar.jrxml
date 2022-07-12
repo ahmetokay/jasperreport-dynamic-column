@@ -12,7 +12,6 @@
 	<field name="aciklama" class="java.lang.String"/>
 	<field name="sinavTurAdi" class="java.lang.String"/>
 	<field name="statusName" class="java.lang.String"/>
-	<field name="guncellemeAdi" class="java.lang.String"/>
 	<field name="cdate" class="java.util.Date"/>
 	<field name="revisionType" class="java.lang.Integer"/>
 	<field name="revisionDate" class="java.util.Date"/>
@@ -21,7 +20,7 @@
 	<title>
 		<band height="20">
 			<staticText>
-				<reportElement x="0" y="0" width="817" height="20" forecolor="#F20000" uuid="d13e8201-5597-4766-a9bc-ecd67e6724a0"/>
+				<reportElement x="0" y="0" width="763" height="20" forecolor="#F20000" uuid="d13e8201-5597-4766-a9bc-ecd67e6724a0"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Sınav Çeşit Listesi]]></text>
 			</staticText>
@@ -82,7 +81,7 @@
 				<text><![CDATA[Soru Sayısı]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="753" y="0" width="64" height="26" backcolor="#CCCCCC" uuid="f97eda16-92ab-4672-810d-e5fc885aa5e8"/>
+				<reportElement mode="Opaque" x="699" y="0" width="64" height="26" backcolor="#CCCCCC" uuid="f97eda16-92ab-4672-810d-e5fc885aa5e8"/>
 				<box leftPadding="2" rightPadding="2">
 					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -119,19 +118,6 @@
 					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
 				</textElement>
 				<text><![CDATA[Statü]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="699" y="0" width="54" height="26" backcolor="#CCCCCC" uuid="9d107ad2-7d70-4f21-8743-e67675329e6a"/>
-				<box leftPadding="2" rightPadding="2">
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
-				</textElement>
-				<text><![CDATA[Güncelleme Nedeni]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="644" y="0" width="55" height="26" backcolor="#CCCCCC" uuid="5f90d6d1-5202-49ff-bf53-0ee28b9353b4"/>
@@ -268,7 +254,7 @@
 				<textFieldExpression><![CDATA[$F{soruSayisi}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="753" y="0" width="64" height="20" uuid="68e0779c-b084-473c-8ea7-05d0bbc49351"/>
+				<reportElement x="699" y="0" width="64" height="20" uuid="68e0779c-b084-473c-8ea7-05d0bbc49351"/>
 				<box leftPadding="2" rightPadding="2">
 					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.5"/>
@@ -305,19 +291,6 @@
 					<font size="8" pdfEncoding="Cp1254"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{statusName}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement x="699" y="0" width="54" height="20" uuid="c9021e7e-cbbc-41d6-b005-6a0e7f8a0a20"/>
-				<box leftPadding="2" rightPadding="2">
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" pdfEncoding="Cp1254"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{guncellemeAdi}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
 				<reportElement x="644" y="0" width="55" height="20" uuid="8fac8162-9a18-44ad-848a-856f9fc32baf"/>

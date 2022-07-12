@@ -13,8 +13,6 @@
 	<field name="obligPartyTpName" class="java.lang.String"/>
 	<field name="gnlGrpId" class="java.lang.String"/>
 	<field name="gnlGrpName" class="java.lang.String"/>
-	<field name="obligUpdRsnTpId" class="java.lang.String"/>
-	<field name="obligUpdRsnTpName" class="java.lang.String"/>
 	<field name="stId" class="java.lang.String"/>
 	<field name="stName" class="java.lang.String"/>
 	<field name="name" class="java.lang.String"/>

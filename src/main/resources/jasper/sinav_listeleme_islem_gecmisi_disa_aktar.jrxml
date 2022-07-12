@@ -11,7 +11,6 @@
 	<field name="sinavYapanKurumAdi" class="java.lang.String"/>
 	<field name="sinavTarihi" class="java.util.Date"/>
 	<field name="statusName" class="java.lang.String"/>
-	<field name="guncellemeAdi" class="java.lang.String"/>
 	<field name="sinavId" class="java.lang.Long"/>
 	<field name="cdate" class="java.util.Date"/>
 	<field name="toplamSoruSayisi" class="java.lang.Integer"/>
@@ -29,7 +28,7 @@
 	<title>
 		<band height="20">
 			<staticText>
-				<reportElement x="0" y="0" width="1107" height="20" forecolor="#F20000" uuid="b622a1eb-7c50-49c7-9f2b-7b3278d33afe"/>
+				<reportElement x="0" y="0" width="1052" height="20" forecolor="#F20000" uuid="b622a1eb-7c50-49c7-9f2b-7b3278d33afe"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Sınav Listesi]]></text>
 			</staticText>
@@ -150,20 +149,6 @@
 				<text><![CDATA[Tanımlanma Tarihi]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="936" y="0" width="55" height="45" backcolor="#CCCCCC" uuid="3a96db32-ed8d-4e32-9090-95f9079e8d5d"/>
-				<box leftPadding="2" rightPadding="2">
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
-				</textElement>
-				<text><![CDATA[Güncelleme Nedeni]]></text>
-			</staticText>
-			<staticText>
 				<reportElement mode="Opaque" x="450" y="0" width="59" height="45" backcolor="#CCCCCC" uuid="fe771247-62da-415d-b373-4421458871d0"/>
 				<box leftPadding="2" rightPadding="2">
 					<pen lineWidth="0.5"/>
@@ -206,7 +191,7 @@
 				<text><![CDATA[İlgili Mevzuat]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="991" y="0" width="55" height="45" backcolor="#CCCCCC" uuid="5c034065-eeec-4ee5-859c-cd49826603b4"/>
+				<reportElement mode="Opaque" x="936" y="0" width="55" height="45" backcolor="#CCCCCC" uuid="5c034065-eeec-4ee5-859c-cd49826603b4"/>
 				<box leftPadding="2" rightPadding="2">
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -234,7 +219,7 @@
 				<text><![CDATA[İlgili Mahkeme Komisyon Kararı]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1046" y="0" width="61" height="45" backcolor="#CCCCCC" uuid="95367bfc-c22a-48e4-8fcd-d937637ebbb0"/>
+				<reportElement mode="Opaque" x="991" y="0" width="61" height="45" backcolor="#CCCCCC" uuid="95367bfc-c22a-48e4-8fcd-d937637ebbb0"/>
 				<box leftPadding="2" rightPadding="2">
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -434,20 +419,6 @@
 				<textFieldExpression><![CDATA[$F{cdate}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="936" y="0" width="55" height="50" uuid="65b4dd1c-1f79-4023-92df-c9f0ba414004"/>
-				<box leftPadding="2" rightPadding="2">
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" pdfEncoding="Cp1254"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{guncellemeAdi}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
 				<reportElement x="450" y="0" width="59" height="50" uuid="63749518-a400-465d-9cb8-c4cf4674809b"/>
 				<box leftPadding="2" rightPadding="2">
 					<pen lineWidth="0.5"/>
@@ -490,7 +461,7 @@
 				<textFieldExpression><![CDATA[$F{mevzuatKisaKod}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
-				<reportElement x="991" y="0" width="55" height="50" uuid="4bbf3cb8-11aa-4439-911c-615df086b575"/>
+				<reportElement x="936" y="0" width="55" height="50" uuid="4bbf3cb8-11aa-4439-911c-615df086b575"/>
 				<box leftPadding="2" rightPadding="2">
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -518,7 +489,7 @@
 				<textFieldExpression><![CDATA[$F{mahkemeKisaKod}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="1046" y="0" width="61" height="50" uuid="e4eae097-9f1d-43a4-9837-334a30e26872"/>
+				<reportElement x="991" y="0" width="61" height="50" uuid="e4eae097-9f1d-43a4-9837-334a30e26872"/>
 				<box leftPadding="2" rightPadding="2">
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>

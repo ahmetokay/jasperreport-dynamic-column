@@ -18,7 +18,6 @@
 	<field name="atamaDurumuAdi" class="java.lang.String"/>
 	<field name="cdate" class="java.util.Date"/>
 	<field name="cuserName" class="java.lang.String"/>
-	<field name="guncellemeNedeniAdi" class="java.lang.String"/>
 	<field name="aciklama" class="java.lang.String"/>
 	<field name="mevzuatlarKisaKod" class="java.lang.String"/>
 	<field name="filtrelerKisaKod" class="java.lang.String"/>
@@ -210,20 +209,7 @@
 				<text><![CDATA[Atanma Durumu]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1005" y="22" width="77" height="60" backcolor="#CCCCCC" uuid="8037e5f7-75ff-4982-8950-9fb3abaff15a"/>
-				<box>
-					<topPen lineWidth="0.25"/>
-					<leftPen lineWidth="0.25"/>
-					<bottomPen lineWidth="0.25"/>
-					<rightPen lineWidth="0.25"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
-				</textElement>
-				<text><![CDATA[Güncelleme Nedeni]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="1082" y="22" width="68" height="60" backcolor="#CCCCCC" uuid="7c11fcce-6de1-424a-8661-18164fe62b3f"/>
+				<reportElement mode="Opaque" x="1005" y="22" width="68" height="60" backcolor="#CCCCCC" uuid="7c11fcce-6de1-424a-8661-18164fe62b3f"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -236,7 +222,7 @@
 				<text><![CDATA[Açıklama]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1150" y="22" width="80" height="60" backcolor="#CCCCCC" uuid="e692c7cb-6f54-4539-9ae6-464e48401a49"/>
+				<reportElement mode="Opaque" x="1073" y="22" width="80" height="60" backcolor="#CCCCCC" uuid="e692c7cb-6f54-4539-9ae6-464e48401a49"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -249,7 +235,7 @@
 				<text><![CDATA[İlgili Mevzuatlar]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1230" y="22" width="80" height="60" backcolor="#CCCCCC" uuid="2dd6b522-7839-4ce5-bd62-b8037510c562"/>
+				<reportElement mode="Opaque" x="1153" y="22" width="80" height="60" backcolor="#CCCCCC" uuid="2dd6b522-7839-4ce5-bd62-b8037510c562"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -262,7 +248,7 @@
 				<text><![CDATA[İlgili Filtreler]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1310" y="22" width="80" height="60" backcolor="#CCCCCC" uuid="e0acbe5a-e40b-4734-ba99-d20f796cd911"/>
+				<reportElement mode="Opaque" x="1233" y="22" width="80" height="60" backcolor="#CCCCCC" uuid="e0acbe5a-e40b-4734-ba99-d20f796cd911"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -288,7 +274,7 @@
 				<text><![CDATA[Görev Yeri Karakteristiği]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="2" width="1390" height="20" forecolor="#F20000" uuid="f64b3a4b-bfe6-483c-9fc9-6912cd9e3e55"/>
+				<reportElement x="0" y="2" width="1313" height="20" forecolor="#F20000" uuid="f64b3a4b-bfe6-483c-9fc9-6912cd9e3e55"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Görevlendirme İşlem Geçmişi Listesi]]></text>
 			</staticText>
@@ -387,7 +373,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{revisionId}]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="92" y="-26" width="60" height="30" uuid="689177a0-bba3-418c-9b3e-1fec904d8986"/>
 				<box>
 					<topPen lineWidth="0.25"/>
@@ -398,7 +384,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" pdfEncoding="Cp1254"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new SimpleDateFormat("dd.MM.yyyy").format($F{revisionDate})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{revisionDate}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="320" y="-26" width="57" height="30" uuid="904101fd-b3b0-45a6-a651-4611bad0afcb"/>
@@ -439,7 +425,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{gorevCesidiAdi}]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="865" y="-26" width="70" height="30" uuid="05198b2e-6704-4267-8275-bfd31b512efe"/>
 				<box>
 					<topPen lineWidth="0.25"/>
@@ -450,7 +436,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" pdfEncoding="Cp1254"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new SimpleDateFormat("dd.MM.yyyy").format($F{cdate})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{cdate}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="935" y="-26" width="70" height="30" uuid="4a758a1f-28f5-4fef-aa2c-7420f6b41903"/>
@@ -479,20 +465,7 @@
 				<textFieldExpression><![CDATA[$F{atamaDurumuAdi}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1005" y="-26" width="77" height="30" uuid="280408f0-5aeb-434b-aef1-96b6622e5be5"/>
-				<box>
-					<topPen lineWidth="0.25"/>
-					<leftPen lineWidth="0.25"/>
-					<bottomPen lineWidth="0.25"/>
-					<rightPen lineWidth="0.25"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" pdfEncoding="Cp1254"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{guncellemeNedeniAdi}]]></textFieldExpression>
-			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1082" y="-26" width="68" height="30" uuid="5e66c7ad-5b79-43cc-80c1-73db9fd8b6e1"/>
+				<reportElement stretchType="RelativeToBandHeight" x="1005" y="-26" width="68" height="30" uuid="5e66c7ad-5b79-43cc-80c1-73db9fd8b6e1"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -505,7 +478,7 @@
 				<textFieldExpression><![CDATA[$F{aciklama}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1150" y="-26" width="80" height="30" uuid="410f2e4c-2e47-4deb-9102-71eab0d0fdcc"/>
+				<reportElement stretchType="RelativeToBandHeight" x="1073" y="-26" width="80" height="30" uuid="410f2e4c-2e47-4deb-9102-71eab0d0fdcc"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -518,7 +491,7 @@
 				<textFieldExpression><![CDATA[$F{mevzuatlarKisaKod}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1230" y="-26" width="80" height="30" uuid="afc59ca3-a07d-4c84-8cc5-097d44ebd1c7"/>
+				<reportElement stretchType="RelativeToBandHeight" x="1153" y="-26" width="80" height="30" uuid="afc59ca3-a07d-4c84-8cc5-097d44ebd1c7"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>
@@ -531,7 +504,7 @@
 				<textFieldExpression><![CDATA[$F{filtrelerKisaKod}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="1310" y="-26" width="80" height="30" uuid="35fc025c-a706-49cb-bb3d-9dc6e76853bb"/>
+				<reportElement stretchType="RelativeToBandHeight" x="1233" y="-26" width="80" height="30" uuid="35fc025c-a706-49cb-bb3d-9dc6e76853bb"/>
 				<box>
 					<topPen lineWidth="0.25"/>
 					<leftPen lineWidth="0.25"/>

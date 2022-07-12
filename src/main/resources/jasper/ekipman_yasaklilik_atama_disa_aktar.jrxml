@@ -15,8 +15,6 @@
 	<field name="gnlGrpName" class="java.lang.String"/>
 	<field name="prohibRsnTpId" class="java.lang.String"/>
 	<field name="prohibRsnTpName" class="java.lang.String"/>
-	<field name="prohibUpdRsnTpId" class="java.lang.String"/>
-	<field name="prohibUpdRsnTpName" class="java.lang.String"/>
 	<field name="stId" class="java.lang.String"/>
 	<field name="stName" class="java.lang.String"/>
 	<field name="name" class="java.lang.String"/>
