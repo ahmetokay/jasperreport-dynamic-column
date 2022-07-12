@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="proje" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555"
+              leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20"
+              uuid="60a0f717-3c1f-45e3-9871-4954cb81a10e">
+    <property name="ireport.zoom" value="1.3310000000000004"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="192"/>
+    <property name="ireport.background.image.properties" value="true,false,1.0,935,205,0,0,451,336"/>
+    <parameter name="kisaKod" class="java.lang.String"/>
+    <parameter name="ad" class="java.lang.String"/>
+    <parameter name="aciklama" class="java.lang.String"/>
+    <parameter name="planlananBaslangicTarihi" class="java.util.Date"/>
+    <parameter name="planlananBitisTarihi" class="java.util.Date"/>
+    <parameter name="gerceklesenBaslangicTarihi" class="java.util.Date"/>
+    <parameter name="gerceklesenBitisTarihi" class="java.util.Date"/>
+    <parameter name="cdate" class="java.util.Date"/>
+    <parameter name="onayTarihi" class="java.util.Date"/>
+    <parameter name="turAdi" class="java.lang.String"/>
+    <parameter name="butceKaynagiAdi" class="java.lang.String"/>
+    <parameter name="statuAdi" class="java.lang.String"/>
+    <parameter name="onaylayanKullaniciAdi" class="java.lang.String"/>
+    <parameter name="projeSuresi" class="java.lang.String"/>
+    <parameter name="izlemeSikligi" class="java.lang.String"/>
+    <parameter name="butce" class="java.math.BigDecimal"/>
+    <parameter name="bagliBirim" class="java.lang.String"/>
+    <parameter name="butceKalemi" class="java.lang.String"/>
+    <parameter name="nace" class="java.lang.String"/>
+    <parameter name="kapsamIl" class="java.lang.String"/>
+    <parameter name="projeSorumlulari" class="java.lang.String"/>
+    <parameter name="projeKoordinatorleri" class="java.lang.String"/>
+    <parameter name="logo" class="java.awt.Image"/>
+    <parameter name="backlogo" class="java.awt.Image"/>
+    <parameter name="dogrulamaKoodu" class="java.lang.String"/>
+    <parameter name="dogrulamaKodu" class="java.lang.String"/>
+    <parameter name="barcode" class="java.awt.Image"/>
+    <parameter name="period" class="java.lang.String"/>
+    <variable name="TL" class="java.lang.String">
+        <variableExpression><![CDATA["TL"]]></variableExpression>
+    </variable>
+    <background>
+        <band height="802">
+            <image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+                <reportElement uuid="df7b9d71-4fcc-401e-8af0-ba545861b3ca" mode="Transparent" x="0" y="137" width="555"
+                               height="520" backcolor="#CCCCCC"/>
+                <imageExpression><![CDATA[$P{backlogo}]]></imageExpression>
+            </image>
+        </band>
+    </background>
+    <pageHeader>
+        <band height="524">
+            <staticText>
+                <reportElement uuid="bf70b3b5-982f-48a3-b443-2738f564b0dc" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="363" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Durumu]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="7dfb38f5-c5f5-4f6b-ae49-1684b9a29147" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="383" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Kaps. Görev Kısa Kod]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="7882e709-3349-45ae-83aa-996f9a3ae7e7" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="403" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Kaps. Görev Adı]]></text>
+            </staticText>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="68b2a826-3e23-4cda-a860-74659f330f50" stretchType="RelativeToBandHeight" x="174"
+                               y="363" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{statuAdi}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="2df58c32-345b-433c-aa97-349d6bd94bf8" stretchType="RelativeToBandHeight" x="174"
+                               y="383" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA[]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="2843fcb3-479f-40c4-8f8c-b52f3a8f4356" stretchType="RelativeToBandHeight" x="174"
+                               y="403" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA[]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement uuid="40d829aa-360c-4692-8ca3-c7990a3751dd" x="170" y="363" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="3bbb5f95-509c-44c5-b492-cc091beabfdf" x="170" y="383" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="8b47e1e1-d45d-4075-a09c-383f2516576d" x="170" y="403" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="35f1c0ae-f1a1-4542-a84f-fa26ba225037" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="144" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Kısa Kod]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="63ee9725-f988-44a7-87d6-8272741895a0" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="164" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Türü]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="402a5c62-18e9-4e89-857c-74f3fbfc962b" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="184" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Adı]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="2eefea31-3e59-4d5d-80bb-ed621971ffcf" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="244" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Planlanan Başlangıç Tarihi]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="23892e11-3872-4502-a4f6-1095da439abe" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="264" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Planlanan Bitiş Tarihi]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="4148b426-5389-4721-92be-c566d2bee664" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="284" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Bütçesi]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="e650f7ba-6c9c-4dcf-af56-334048f7a3a4" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="304" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Bütçe Kaynağı]]></text>
+            </staticText>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="832bcef8-5a80-4f8f-99ec-65adca496392" stretchType="RelativeToBandHeight" x="174"
+                               y="144" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{kisaKod}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="aa6cee26-f0c7-481d-a946-462121019d06" stretchType="RelativeToBandHeight" x="174"
+                               y="164" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{turAdi}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="d8b5fd14-b65d-4e53-84da-9a5182a8aa27" stretchType="RelativeToBandHeight" x="174"
+                               y="184" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{ad}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="8e09144d-7722-4793-aae2-347a60d7281a" stretchType="RelativeToBandHeight" x="174"
+                               y="244" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression>
+                    <![CDATA[$P{planlananBaslangicTarihi} == null ? null : new SimpleDateFormat("dd/MM/yyyy").format($P{planlananBaslangicTarihi})]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="a8dfbd04-4dba-421e-a261-6d7c32a34c6d" stretchType="RelativeToBandHeight" x="174"
+                               y="264" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression>
+                    <![CDATA[$P{planlananBitisTarihi} == null ? null : new SimpleDateFormat("dd/MM/yyyy").format($P{planlananBitisTarihi})]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="b0970e98-63d2-4e7f-a363-75f26a8d74c8" stretchType="RelativeToBandHeight" x="174"
+                               y="284" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression>
+                    <![CDATA[$P{butce} == null ? null : new java.text.DecimalFormat("#,##0").format($P{butce}) + new String(" TL")]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="99be7859-806a-48e2-a95a-30575baabf17" stretchType="RelativeToBandHeight" x="174"
+                               y="304" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{butceKaynagiAdi}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement uuid="b6d0fc38-408c-46e3-a331-b9c724766357" x="170" y="144" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="4b7c12f5-758c-44f7-9452-1d7a977ba828" x="170" y="164" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="8f01e19e-17f2-4c4c-8868-77ff8e34f853" x="170" y="184" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="fcb6baec-d38c-4ac2-bbf4-b6851f9e734b" x="170" y="244" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="2726b706-7b37-4d54-b4fe-8607777a09a4" x="170" y="264" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="59353cf9-4332-4fd6-9bf8-f2f39f7268fb" x="170" y="284" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="4cc138a8-9ae7-4cca-9732-ee06a7a8fc93" x="170" y="304" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="23b889f5-a39a-4993-aa02-138dcf1344f6" mode="Opaque" x="1" y="53" width="553"
+                               height="61" forecolor="#F20000" backcolor="#FFFFFF"/>
+                <box>
+                    <topPen lineWidth="0.0"/>
+                    <leftPen lineWidth="0.0"/>
+                    <bottomPen lineWidth="0.0"/>
+                    <rightPen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="14" pdfFontName="Helvetica" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje İzleme
+Detay Görüntüleme Raporu]]></text>
+            </staticText>
+            <image scaleImage="RealSize" hAlign="Center" vAlign="Middle">
+                <reportElement uuid="2249c32c-1d91-4f75-9cf9-85849781ef59" x="1" y="0" width="190" height="89"/>
+                <imageExpression><![CDATA[$P{logo}]]></imageExpression>
+            </image>
+            <line>
+                <reportElement uuid="1e4a25fc-1c91-4cb0-b569-149d54ba3a86" x="0" y="134" width="555" height="1"/>
+            </line>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="e867599f-b90a-4f8d-8f80-1785a05ce3a1" stretchType="RelativeToBandHeight" x="383"
+                               y="114" width="172" height="20"/>
+                <box>
+                    <topPen lineWidth="0.0"/>
+                    <leftPen lineWidth="0.0"/>
+                    <bottomPen lineWidth="0.0"/>
+                    <rightPen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font size="7" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression>
+                    <![CDATA[new SimpleDateFormat("EEEE, dd MMMM, yyyy / HH:mm.ss", new Locale("tr")).format(new Date())]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement uuid="78c30474-65f6-4d3b-aae0-36a7204830a4" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="423" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Kaps. Etkinlik Kısa Kod]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="44fd637b-7f9d-49bb-abec-6342c8601dbd" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="443" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Kaps. Etkinlik Adı]]></text>
+            </staticText>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="2edc0d64-2a51-4f73-81fd-bb66abdea2c3" stretchType="RelativeToBandHeight" x="174"
+                               y="423" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="60253911-e14a-4a8b-be58-f840bb7f1e8e" stretchType="RelativeToBandHeight" x="174"
+                               y="443" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+            </textField>
+            <staticText>
+                <reportElement uuid="9aa3d2dc-cb41-4484-9706-1082b5353fe6" x="170" y="423" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="c3b0600a-ad01-451c-ab39-293b227a72c8" x="170" y="443" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="4c35848a-3688-4942-a9e1-4865f4fd9749" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="463" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Kaps. İşyerleri SGK No]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="e1d185ce-1ed3-443c-aab6-52fe17e84894" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="482" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Kaps. İşyerleri SGK Unvanı]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="47333c9f-3e02-4a48-9978-73db8f0b2e73" x="170" y="463" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="130301ea-6e00-4c60-8014-fa27f6797f6b" x="170" y="483" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="afcac41e-4cba-4bde-9caa-c8a369f71263" stretchType="RelativeToBandHeight" x="175"
+                               y="463" width="380" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="cdb212fb-761f-4acb-a3a1-f4b1c54e9c11" stretchType="RelativeToBandHeight" x="175"
+                               y="483" width="380" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="8c0267ba-c41e-42de-870a-6d3a56df1ac8" stretchType="RelativeToBandHeight" x="174"
+                               y="204" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{projeSorumlulari}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement uuid="ac2267e7-02dd-4ae9-95ce-7b2f9b0e8108" x="170" y="204" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="9cf8e99b-03b4-4181-be0b-8a1da00255d9" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="204" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Sorumlusu Ad Soyad]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="69bde5c3-d1c9-4656-97a8-7d9f0c726569" x="170" y="224" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="c86ca8f1-d6be-4a3a-85f3-ff9556648273" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="224" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Proje Koordinatörü Ad Soyad]]></text>
+            </staticText>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="abc3f906-9919-4c5d-a95b-ac9fae6b996d" stretchType="RelativeToBandHeight" x="174"
+                               y="224" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{projeKoordinatorleri}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement uuid="441ca94a-44dc-4d97-b45d-e654d2141d3e" x="170" y="324" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="4230fa96-7e93-401b-b44a-3a876bbbfb27" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="344" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Gerçekleşen Proje Bitiş Tarihi]]></text>
+            </staticText>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="1d0f2f61-cd4b-413d-948c-d19a8b5263cb" stretchType="RelativeToBandHeight" x="174"
+                               y="324" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression>
+                    <![CDATA[$P{gerceklesenBaslangicTarihi} == null ? null : new SimpleDateFormat("dd/MM/yyyy").format($P{gerceklesenBaslangicTarihi})]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="7b9cd24c-7bfe-45c2-afcf-ffcee4e79104" stretchType="RelativeToBandHeight" x="174"
+                               y="344" width="381" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression>
+                    <![CDATA[$P{gerceklesenBitisTarihi} == null ? null : new SimpleDateFormat("dd/MM/yyyy").format($P{gerceklesenBitisTarihi})]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement uuid="0608773c-61a1-4f18-a53b-8fa24225c802" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="324" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Gerçekleşen Proje Başlangıç Tarihi]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="02908791-43b6-4ac3-a3cd-3c31d2a5eb2c" x="170" y="344" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="7f60ff55-edad-499b-aec3-9786f2a87e83" stretchType="RelativeToBandHeight"
+                               mode="Transparent" x="0" y="502" width="169" height="20" backcolor="#FFFFFF"/>
+                <box leftPadding="2"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+                </textElement>
+                <text><![CDATA[Açıklama]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="a828a4f1-bdb2-42b5-97ae-ebe5803b8e38" x="170" y="502" width="5" height="20"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle"/>
+                <text><![CDATA[:]]></text>
+            </staticText>
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement uuid="8db279f5-47f0-4807-9c10-d6e8e622084d" stretchType="RelativeToBandHeight" x="175"
+                               y="502" width="380" height="20"/>
+                <box leftPadding="0"/>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font size="10" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{aciklama}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <pageFooter>
+        <band height="88">
+            <textField>
+                <reportElement uuid="5a780b41-cee9-422b-a843-7333060472dc" x="0" y="28" width="555" height="50"/>
+                <textElement markup="html">
+                    <font size="7" pdfEncoding="Cp1254"/>
+                </textElement>
+                <textFieldExpression><![CDATA["T.C. AİLE, ÇALIŞMA VE SOSYAL HİZMETLER BAKANLIĞI - İŞ SAĞLIĞI VE GÜVENLİĞİ GENEL MÜDÜRLÜĞÜ" +"<br>"+
+
+"İş Sağlığı ve Güvenliği Kayıt, Takip ve İzleme Programı - İSG-KATİP - v9.19.01.10"
+
++ "<br>" + "İş Bu Belge İsg-Katip Üzerinden " +$P{dogrulamaKodu}+ " Doğrulama Kodu ile Alınmıştır."]]></textFieldExpression>
+            </textField>
+            <image>
+                <reportElement uuid="ac819f43-3a74-4947-9573-07c026cefa06" x="455" y="0" width="100" height="88"/>
+                <imageExpression><![CDATA[$P{barcode}]]></imageExpression>
+            </image>
+        </band>
+    </pageFooter>
+</jasperReport>

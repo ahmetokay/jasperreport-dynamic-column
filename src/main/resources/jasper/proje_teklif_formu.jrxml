@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sinav_detay" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb0b1be1-7c64-47a8-85c6-fb278121ab5f">
+	<property name="ireport.zoom" value="1.3310000000000162"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="387"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="nace_dataset" uuid="fed1e83a-b117-4805-a8bd-c6e1205ffb05">
+		<field name="naceKod" class="java.lang.String"/>
+		<field name="tanim" class="java.lang.String"/>
+		<field name="tehlikeSinifiAdi" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="proje_yonetecek_kurum_birim_dataset" uuid="58a79d75-9d56-4d74-a7b2-0944bac1821f">
+		<field name="bagliBirimAdi" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="proje_sorumlusu_dataset" uuid="d06ee9a6-e0ce-4b30-b430-5eb3a235a941">
+		<field name="ad" class="java.lang.String"/>
+		<field name="soyad" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="barcode" class="java.awt.Image"/>
+	<parameter name="backlogo" class="java.awt.Image"/>
+	<parameter name="dogrulamaKodu" class="java.lang.String"/>
+	<field name="projeAdi" class="java.lang.String"/>
+	<field name="projeTurAdi" class="java.lang.String"/>
+	<field name="projeButce" class="java.math.BigDecimal"/>
+	<field name="projeButceKaynagiAdi" class="java.lang.String"/>
+	<field name="projePlanlananBaslangicTarihi" class="java.util.Date"/>
+	<field name="projePlanlananBitisTarihi" class="java.util.Date"/>
+	<field name="projeFikriniOnerenKurumKurulus" class="java.lang.String"/>
+	<field name="yeri" class="java.lang.String"/>
+	<field name="projeninGerekcesi" class="java.lang.String"/>
+	<field name="projeninHedefAldigiKesimTaraf" class="java.lang.String"/>
+	<field name="projeninGenelAmaci" class="java.lang.String"/>
+	<field name="projeninHedefleri" class="java.lang.String"/>
+	<field name="projeninIstihdamaKatkisi" class="java.lang.String"/>
+	<field name="projeninIliskiliOlduguPlan" class="java.lang.String"/>
+	<field name="projeFikirGelistirilmesindeUygulananYontem" class="java.lang.String"/>
+	<field name="projeIlgiliValilikGorusu" class="java.lang.String"/>
+	<field name="beklenenSonuclar" class="java.lang.String"/>
+	<field name="bilesenleri" class="java.lang.String"/>
+	<field name="girdiIhtiyaci" class="java.lang.String"/>
+	<field name="projeninDayanagiVarsayimlarRiskler" class="java.lang.String"/>
+	<field name="projeninYapilabilirligiSurdurulebilirligi" class="java.lang.String"/>
+	<field name="yatirimSonrasiGelirGider" class="java.math.BigDecimal"/>
+	<field name="statusName" class="java.lang.String"/>
+	<field name="kisaKod" class="java.lang.String"/>
+	<field name="cdate" class="java.util.Date"/>
+	<field name="udate" class="java.util.Date"/>
+	<field name="guncellemeAdi" class="java.lang.String"/>
+	<field name="projeNaceDTOList" class="java.util.Collection"/>
+	<field name="projeBagliBirimDTOList" class="java.util.Collection"/>
+	<field name="projeSorumluDTOList" class="java.util.Collection"/>
+	<background>
+		<band height="802">
+			<image>
+				<reportElement uuid="5a32dc70-d89a-44ec-8155-fe64922dee9a" x="0" y="0" width="555" height="802"/>
+				<imageExpression><![CDATA[$P{backlogo}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="92">
+			<image>
+				<reportElement uuid="8d051971-cedc-45bd-a19e-79ce4e86e007" x="0" y="0" width="190" height="92"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f566ae82-c3fd-47e0-9b99-65d97f79ea08" x="189" y="80" width="366" height="12"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM, yyyy / HH:mm.ss", new Locale("tr")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="fefe1d62-a271-4a47-8f59-95d0b36796a9" x="190" y="0" width="180" height="80" forecolor="#F20000"/>
+				<box bottomPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Teklif Formu]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="396">
+			<staticText>
+				<reportElement uuid="eacc0805-53ed-4b18-a18c-a91207441503" mode="Transparent" x="0" y="18" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projenin Türü]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8e8c6ce3-bc39-4829-bb59-8fd4ddb7519d" x="203" y="18" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeTurAdi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2f09c61a-fb46-4399-ba9e-62f02dcf095f" mode="Transparent" x="0" y="36" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Öngörülen Finansman Kaynakları]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d6f42251-e61d-4ee2-b763-e6f701f0fdc0" x="203" y="36" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeButceKaynagiAdi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b20e593e-fb50-4bc2-88e5-b8f4ae9d1d46" mode="Transparent" x="0" y="72" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Planlanan Başlangıç Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="379230fb-3a8d-4edf-9de4-c5917711246b" mode="Transparent" x="0" y="90" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Planlanan Bitiş Tarihi]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="ad2480a0-812e-4e34-87e0-61d263bfe4d3" x="203" y="72" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projePlanlananBaslangicTarihi}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="20cb8870-37de-4c51-8a53-627dc3e1c1d2" x="203" y="90" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projePlanlananBitisTarihi}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="404be925-ad24-47d9-8f67-480899585859" x="203" y="54" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeButce}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="117ece99-e797-40b1-82c9-5f169df8dc64" mode="Transparent" x="0" y="54" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Maliyeti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19c507e9-2009-406e-a22e-e46533bba4ac" mode="Transparent" x="0" y="108" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yeri]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="1e8f67fd-36a3-4896-ab17-9bfa911fd5a8" x="203" y="108" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yeri}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="21097972-3025-4f82-852b-a6411015e074" x="203" y="126" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeFikriniOnerenKurumKurulus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2345cf4a-56fd-4d1d-a68a-bfbc1965f8ca" mode="Transparent" x="0" y="126" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Fikrini Öneren Kurum/Kuruluş]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="d55b631b-4a92-451d-bedb-ae78994a95eb" x="203" y="144" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeninGerekcesi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b4a309a2-a8ec-4fc8-90c4-14de3f273774" mode="Transparent" x="0" y="144" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Gerekçesi]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="3fed7374-2ebc-474f-a829-c030d74cef84" x="203" y="162" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeninHedefAldigiKesimTaraf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0bc74071-b62b-4bbc-a371-9e4dbba118f3" mode="Transparent" x="0" y="162" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Hedef Aldığı Kesim,Etkileyeceği D. Taraflar]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="84034260-3e86-4dac-a465-b3560665a78d" x="203" y="180" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeninGenelAmaci}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d3fdf0f2-db78-44c7-9b3b-7164c770bf97" mode="Transparent" x="0" y="180" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projenin Genel Amacı]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="49be934b-7447-4e7f-8b61-bc443c48a9dd" x="203" y="198" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeninHedefleri}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2015a835-4934-4fd6-8468-5e67c5409f42" mode="Transparent" x="0" y="198" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projenin Hedefleri]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="3ae32d73-e78c-48aa-9029-74dcf6d73f67" x="203" y="216" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeninIstihdamaKatkisi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="935858f5-f8af-41df-8430-f1fd9c85cf58" mode="Transparent" x="0" y="216" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projenin İstihdama Katkısı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d482f519-7fe5-4c0d-9469-80c4f8627dad" x="199" y="18" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7065d736-7906-4ba6-a329-d5e45a4c06e6" x="199" y="54" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9d53f8a3-32f0-4752-8746-37954df4f583" x="199" y="36" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="710d3ae3-b26a-4ca4-8b9f-5bc6350147ce" x="199" y="90" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4e4570ba-47eb-4b81-b38b-0de8954949e3" x="199" y="72" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3578956a-2293-4f83-ae9c-ec41a226a07a" x="199" y="126" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6227a15d-640c-479e-a852-9b94b13f78bb" x="199" y="108" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="91db4dce-b8e3-4e52-826a-7937f13a69c7" x="199" y="162" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="867c7214-e0ff-4d71-ba38-0bca54d029e4" x="199" y="144" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19b353ca-99d7-4069-9670-50f591d6f505" x="199" y="198" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b9dbfe7f-7f97-47f1-ad4e-36fb454e17ab" x="199" y="180" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="53268c4d-8866-435d-8e2e-a2bfc272d8fe" x="199" y="216" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7d089543-a2da-4582-bb52-f5840fea9375" mode="Transparent" x="0" y="234" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[İlişkili Olduğu Dayandığı Plan, Program, İdare Stratejik Planı, Performans Programı, Proje ve Etütler]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6293974b-05fb-4bff-9337-bb952dd49231" x="199" y="234" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="40a38673-9604-48b4-bad1-74b97131c23e" x="203" y="234" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeninIliskiliOlduguPlan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d896510a-fa69-467c-b5f5-0cfbc739a162" x="199" y="252" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="bb7c5afc-ec8b-44d0-95ba-cb725d8d3906" x="203" y="252" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeFikirGelistirilmesindeUygulananYontem}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6b84ba41-90d8-4cda-bf28-c23321d80345" mode="Transparent" x="0" y="252" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Fikrinin Geliştirilmesinde Uyg. Yöntem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f9bc23b6-f271-495f-921e-b178bbeda3d6" x="199" y="270" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2f9be2b7-7046-4c37-a979-b00ea1f6c85e" mode="Transparent" x="0" y="270" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje İle İlgili Valilik Görüşü]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="9b728e75-1986-46ff-b142-2536d2fcc0aa" x="203" y="270" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeIlgiliValilikGorusu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0c619ec5-dc84-4db5-a4de-109e6b23f667" x="199" y="288" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="033e950b-f8d1-46c6-b145-09fd02f7d672" mode="Transparent" x="0" y="288" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Beklenen Sonuçları / Çıktıları]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="d1da47f4-5ea9-4797-b83e-ede924f67e98" x="203" y="288" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{beklenenSonuclar}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6b1e8d28-aae2-42a4-81f4-ffeb36160d07" x="203" y="0" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeAdi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="aa93f826-c8b7-45f9-a08e-df1ff2c10692" mode="Transparent" x="0" y="0" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Adı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6b690157-de69-4624-b0bd-ea8e6fb335bf" x="199" y="0" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="32c8a983-3475-4902-b6f4-8dfba9e9631e" x="203" y="306" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bilesenleri}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="723fa740-5815-4ffd-8aaa-272a9a6df53e" x="199" y="306" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ce8b019-fc24-453c-90f2-80d3260e00ea" mode="Transparent" x="0" y="306" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projenin Bileşenleri]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="321752fc-0ee3-4905-8ce9-39907fcd00be" x="203" y="324" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{girdiIhtiyaci}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d05a7a05-d7ed-4c69-a199-e2d0a230c506" x="199" y="324" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e8d1a650-7015-4299-8b4a-14e71eb8c61b" mode="Transparent" x="0" y="324" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Girdi İhtiyacı]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="bb8e76d4-2c94-4af7-a6de-f0c75a7c78c7" x="203" y="342" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeninDayanagiVarsayimlarRiskler}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7d3dd7d5-86a1-4562-9b09-dcb88634e955" x="199" y="342" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5881f41e-5461-4c74-9009-bde48da5433d" mode="Transparent" x="0" y="342" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Dayandığı Varsayımlar, Riskler]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cea6fedb-95fe-4d8e-94d9-4eea3c9507c2" x="199" y="360" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="a59c9666-f17f-4645-96cd-4b4b4c981ab5" x="203" y="378" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yatirimSonrasiGelirGider}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ddadbb54-ba47-4bb6-b2b2-8b1b20817e86" x="199" y="378" width="5" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="3856f224-15dd-45e3-99a2-2bc3ce211a4c" x="203" y="360" width="352" height="18" isRemoveLineWhenBlank="true"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeninYapilabilirligiSurdurulebilirligi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d05f15a4-6296-4010-ac5d-709186bfa5c3" mode="Transparent" x="0" y="378" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yatırım Sonrası Gelir ve Giderler]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b5eaa70e-c9fa-43e2-b377-3f9a728cb0a4" mode="Transparent" x="0" y="360" width="200" height="18" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projenin Yapılabilirliği ve Sürdürülebilirliği]]></text>
+			</staticText>
+		</band>
+		<band height="54">
+			<printWhenExpression><![CDATA[$F{projeNaceDTOList}.size()>0]]></printWhenExpression>
+			<componentElement>
+				<reportElement uuid="2ef2f736-a82b-4741-8577-34ccc4e94dd7" key="table" style="table" x="0" y="18" width="555" height="36" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="nace_dataset" uuid="3dee9ef9-8f96-4ff9-86ee-760ffefddf83">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{projeNaceDTOList})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="3f07888e-c6a6-47c7-96f9-4a17aa9b3eeb">
+						<jr:columnHeader height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="2b9d6aa8-04bc-4c31-b747-1ecc7119ebf5" x="0" y="0" width="80" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254"/>
+								</textElement>
+								<text><![CDATA[Kodu]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="8ecb2ef0-6064-4047-90bb-7fcc03b4da06" x="0" y="0" width="80" height="18"/>
+								<box leftPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{naceKod}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="348" uuid="4f5984b4-9a52-42eb-9578-85766ed6070d">
+						<jr:columnHeader height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="156bd444-fb4a-418b-a423-fc283b0236aa" x="0" y="0" width="348" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254"/>
+								</textElement>
+								<text><![CDATA[Adı]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="c825f73d-5836-41b9-85f4-c3b1ec06ab2e" x="0" y="0" width="348" height="18"/>
+								<box leftPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tanim}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="127" uuid="eefcada3-8b84-4483-978b-bd7df6fea400">
+						<jr:columnHeader height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="b8ae0c33-696e-426d-9d6f-aefe0f93e656" x="0" y="0" width="127" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254"/>
+								</textElement>
+								<text><![CDATA[Tehlike Sınıfı]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="435556f6-a455-4d81-9785-2caf7e71e837" x="0" y="0" width="127" height="18"/>
+								<box leftPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tehlikeSinifiAdi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="2c944735-ca76-404a-bd7f-691d9839992b" mode="Opaque" x="0" y="0" width="555" height="18" isRemoveLineWhenBlank="true" backcolor="#CCCCCC"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sektör]]></text>
+			</staticText>
+		</band>
+		<band height="36">
+			<printWhenExpression><![CDATA[$F{projeBagliBirimDTOList}.size() > 0]]></printWhenExpression>
+			<staticText>
+				<reportElement uuid="0e5d5828-bd05-4ba8-8b36-d5e44ed8a360" mode="Opaque" x="0" y="0" width="555" height="18" isRemoveLineWhenBlank="true" backcolor="#CCCCCC"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projeyi Yürütecek Kurum/Kuruluş]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="421a364d-4513-4250-8b6a-0ffc2e4f82e5" key="table 1" style="table 1" x="0" y="18" width="555" height="18" isPrintWhenDetailOverflows="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="proje_yonetecek_kurum_birim_dataset" uuid="b71d135b-1d1a-4ed7-8057-c5716f7d10f5">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{projeBagliBirimDTOList})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="555" uuid="edfd093b-2553-40eb-b55e-0c703f7b26dc">
+						<jr:detailCell style="table 1_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="52507c7c-7ca0-4279-a78f-a33d35c21df6" x="0" y="0" width="555" height="18"/>
+								<box leftPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bagliBirimAdi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="36">
+			<printWhenExpression><![CDATA[$F{projeSorumluDTOList}.size() > 0]]></printWhenExpression>
+			<staticText>
+				<reportElement uuid="01ea65e1-e217-40aa-9363-df454fd8f80a" mode="Opaque" x="0" y="0" width="555" height="18" isRemoveLineWhenBlank="true" backcolor="#CCCCCC"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projenin Geliştirilmesinden Sorumlu Kişi]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="b43befd2-73b1-4e46-b5aa-68a8a3f69230" key="table 2" style="table 2" x="0" y="18" width="555" height="18" isPrintWhenDetailOverflows="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="proje_sorumlusu_dataset" uuid="6f7fa8f6-152d-4119-a583-ec8dbc2022e6">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{projeSorumluDTOList})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="277" uuid="83e04847-2e74-4acb-8fe0-629184f083a3">
+						<jr:detailCell style="table 2_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="84902c7a-2cee-4744-818f-c634fd29fb51" x="0" y="0" width="277" height="18"/>
+								<box leftPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{ad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="277" uuid="296aae74-a3b5-4534-94e1-77c3016925f4">
+						<jr:detailCell style="table 2_TD" height="18" rowSpan="1">
+							<textField>
+								<reportElement uuid="74d4a8dc-5669-4831-aea3-9b5a69c5d0d2" x="0" y="0" width="277" height="18"/>
+								<box leftPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{soyad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="88">
+			<image>
+				<reportElement uuid="4068b676-08d2-4add-b763-18111e0aa247" x="455" y="0" width="100" height="88"/>
+				<imageExpression><![CDATA[$P{barcode}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="83fa5ffc-985e-4fd2-a8de-d48100876147" x="0" y="0" width="455" height="88"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA["T.C. AİLE, ÇALIŞMA VE SOSYAL HİZMETLER BAKANLIĞI - İŞ SAĞLIĞI VE GÜVENLİĞİ GENEL MÜDÜRLÜĞÜ" +"<br>"+
+
+"İş Sağlığı ve Güvenliği Kayıt, Takip ve İzleme Programı - İSG-KATİP - v9.19.01.10"
+
++ "<br>" + "İş Bu Belge İsg-Katip Üzerinden " +$P{dogrulamaKodu}+ " Doğrulama Kodu ile Alınmıştır."]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

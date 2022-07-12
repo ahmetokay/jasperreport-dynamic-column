@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sinav_detay" pageWidth="842" pageHeight="565" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="832" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="bb0b1be1-7c64-47a8-85c6-fb278121ab5f">
+	<property name="ireport.zoom" value="2.143588810000053"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="327"/>
+	<parameter name="barcode" class="java.awt.Image"/>
+	<parameter name="dogrulamaKodu" class="java.lang.String"/>
+	<parameter name="backlogo" class="java.awt.Image"/>
+	<parameter name="baslik" class="java.lang.String"/>
+	<parameter name="aciklama" class="java.lang.String"/>
+	<parameter name="tarih" class="java.util.Date"/>
+	<parameter name="belgeNo" class="java.lang.String"/>
+	<parameter name="adSoyadKey" class="java.lang.String"/>
+	<parameter name="eImzalayanAdSoyad" class="java.lang.String"/>
+	<parameter name="eImzalayanUnvan" class="java.lang.String"/>
+	<parameter name="adres" class="java.lang.String"/>
+	<parameter name="il" class="java.lang.String"/>
+	<parameter name="imzalandi" class="java.lang.Boolean"/>
+	<background>
+		<band height="555">
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement uuid="15c3c1f5-12a8-4082-9d1e-e796f332d97c" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="832" height="555"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA[$P{backlogo}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="555">
+			<staticText>
+				<reportElement uuid="6a365396-5dbf-4a31-b5b5-8b62dd2c948d" x="70" y="217" width="84" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Tarih]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="79d0d5c5-76bb-4efe-8265-1195fb897345" x="70" y="235" width="84" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Belge No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="506f5c8c-b460-4850-a81a-760a5769c332" x="70" y="253" width="84" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Unvan]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="eb7d1422-2b73-4f9b-a937-639d8940d229" x="157" y="217" width="272" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tarih}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="94435016-8701-4c60-976f-ab03bdb152a0" x="154" y="217" width="4" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71adc8fa-8c80-4c93-bc7c-992b9f3b7ac5" x="154" y="235" width="4" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e5a28a8a-495b-4e11-80d2-93225091074a" x="154" y="253" width="4" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="###0" isBlankWhenNull="true">
+				<reportElement uuid="f92bf1ba-25cc-4d9a-9419-21b9bb735cd7" x="157" y="235" width="272" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{belgeNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8fa69193-de95-4de7-9ae7-8283b08bc7da" x="157" y="253" width="272" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adSoyadKey}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2add98b3-d786-4c07-8c28-7928c247ed70" x="0" y="271" width="832" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{baslik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2ec21f8f-b690-497e-8725-afabef685f8b" x="70" y="311" width="692" height="92"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Justified">
+					<font size="15" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aciklama}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1d15cddc-5a44-4dbb-8ef4-34d08c86d14a" x="613" y="421" width="149" height="18"/>
+				<box topPadding="2" leftPadding="0" bottomPadding="2" rightPadding="0"/>
+				<textElement textAlignment="Center" markup="html">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{eImzalayanAdSoyad}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4186eccd-61cd-42d9-8e7c-069dde932cf9" x="613" y="439" width="149" height="32"/>
+				<box topPadding="2" leftPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{eImzalayanUnvan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="fa575175-c964-46d2-8e19-3625cb3cd94c" x="613" y="403" width="149" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[E-İmzalıdır]]></text>
+			</staticText>
+			<image scaleImage="RetainShape">
+				<reportElement uuid="cb94a143-50a9-40f9-bb99-592200c1eced" x="57" y="403" width="100" height="88"/>
+				<imageExpression><![CDATA[$P{barcode}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="d47dec4e-c5d8-4ff8-ba5d-ad8a9204bd2d" x="70" y="491" width="443" height="50"/>
+				<textElement markup="html">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA["T.C. AİLE, ÇALIŞMA VE SOSYAL HİZMETLER BAKANLIĞI - İŞ SAĞLIĞI VE GÜVENLİĞİ GENEL MÜDÜRLÜĞÜ" +"<br>"+
+
+"İş Sağlığı ve Güvenliği Kayıt, Takip ve İzleme Programı - İSG-KATİP - v9.19.01.10"
+
++ "<br>" + "İş Bu Belge İsg-Katip Üzerinden " +$P{dogrulamaKodu}+ " Doğrulama Kodu ile Alınmıştır."]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

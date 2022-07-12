@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sinav_cesit_detay" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="92fbc971-3c78-471a-942c-5acdc2e75880">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="false"/>
+	<property name="ireport.zoom" value="0.9090909090909179"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.Long"/>
+	<parameter name="adi" class="java.lang.String"/>
+	<parameter name="maxPuan" class="java.lang.Integer"/>
+	<parameter name="gecerNot" class="java.lang.Integer"/>
+	<parameter name="soruSayisi" class="java.lang.Integer"/>
+	<parameter name="aciklama" class="java.lang.String"/>
+	<parameter name="sinavTurAdi" class="java.lang.String"/>
+	<parameter name="statusName" class="java.lang.String"/>
+	<parameter name="guncellemeAdi" class="java.lang.String"/>
+	<parameter name="kisaKod" class="java.lang.String"/>
+	<parameter name="cdate" class="java.util.Date"/>
+	<parameter name="udate" class="java.util.Date"/>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="barcode" class="java.awt.Image"/>
+	<parameter name="backlogo" class="java.awt.Image"/>
+	<parameter name="dogrulamaKodu" class="java.lang.String"/>
+	<background>
+		<band height="802">
+			<image>
+				<reportElement uuid="5a32dc70-d89a-44ec-8155-fe64922dee9a" x="0" y="0" width="555" height="802"/>
+				<imageExpression><![CDATA[$P{backlogo}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="92">
+			<image>
+				<reportElement uuid="8d051971-cedc-45bd-a19e-79ce4e86e007" x="0" y="0" width="190" height="92"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f566ae82-c3fd-47e0-9b99-65d97f79ea08" x="189" y="80" width="366" height="12"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM, yyyy / HH:mm.ss", new Locale("tr")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="fefe1d62-a271-4a47-8f59-95d0b36796a9" x="190" y="0" width="180" height="80" forecolor="#F20000"/>
+				<box bottomPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Çeşidi Listeleme
+Detay Görüntüleme Raporu]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="192">
+			<staticText>
+				<reportElement uuid="cdc75c1f-107d-4619-8d30-16b7a6826e39" x="0" y="4" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Kısa Kod]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2245b4f3-628a-49ea-b2ce-4341be06d2bf" x="0" y="21" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Çeşit Adı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0b1028c6-166e-488a-97ad-bdee429e4a76" x="0" y="55" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Geçer Not]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="795adc4b-662b-467c-b51d-d0168ba0ba27" x="0" y="38" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[En Fazla Puan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0b07ff8f-0cf8-4d7f-a853-a4cae5c86422" x="0" y="89" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Türü]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ff21c4ad-1702-4080-8a7b-080c25f2c680" x="0" y="123" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Tanımlanma Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d45dbf35-340d-43cd-a228-b8493031b159" x="0" y="72" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Soru Sayısı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b519ae32-32b9-4dec-bb15-659a7fa2ea7e" x="0" y="106" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Statü]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="531735aa-70b4-4d47-b2fd-51b9c19484ed" x="0" y="157" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Güncellenme Nedeni]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19adaadb-4914-47fc-9b09-f6d35eccf669" x="0" y="140" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Güncellenme Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="32256c4f-dbb9-4581-b4ba-72585c88467f" x="0" y="174" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Açıklama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="91431181-18df-4099-b92f-00cae7901f08" x="169" y="4" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a3f46466-5cb5-4980-b73d-1c598e3f2002" x="169" y="21" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="87ed8b37-face-4b39-ac68-426a0fc8c532" x="169" y="55" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="911dd53c-f06d-4069-b60f-fdcc8debbea3" x="169" y="38" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c26543ad-ea20-4b51-8478-b09ae631c1f8" x="169" y="123" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a2ea677a-da28-491a-9659-9467a62ebf7f" x="169" y="106" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="83320c27-6a7c-40b0-8dcf-4fe1fd99e901" x="169" y="89" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2f7c5b4d-eb7f-4dfa-ae67-e579b1fb1304" x="169" y="72" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8e3e92eb-9a63-4dc8-a4c3-8ccaf2ac8c6b" x="169" y="174" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="60df30cd-18c3-460c-a407-c8b19a24af66" x="169" y="157" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="862eb676-d338-45d4-a199-bb218bca2d42" x="169" y="140" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="624e0db7-a827-41fc-b9c2-c70bc6faadee" x="173" y="4" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kisaKod}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9e126ae7-22a0-40d8-b81e-6126f2994559" x="173" y="21" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0c5791e9-549a-42eb-b768-64e4e8d42f4e" x="173" y="38" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{maxPuan}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="474f3914-a444-42c9-943f-6a80883dfdeb" x="173" y="55" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{gecerNot}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d9062d3a-0486-4918-bbb5-0c6392a7eadd" x="173" y="72" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{soruSayisi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="074aab84-0b92-4055-8357-73b5fdea6a7d" x="173" y="89" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sinavTurAdi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="bc631aef-ab79-49c6-8702-d2cd66dde0b9" x="173" y="106" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{statusName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="10f77eb0-d525-46fd-8a93-c2006c9e0a68" x="173" y="123" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cdate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="cef4ee27-5f34-4f75-9a7b-44f3a3b1b63a" x="173" y="140" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{udate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f870d071-ba82-4a5b-8562-90f83e955006" x="173" y="157" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{guncellemeAdi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="925f8a5b-cab6-4408-b1d5-6502f1998abd" x="173" y="174" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aciklama}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="88">
+			<image>
+				<reportElement uuid="4068b676-08d2-4add-b763-18111e0aa247" x="455" y="0" width="100" height="88"/>
+				<imageExpression><![CDATA[$P{barcode}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="83fa5ffc-985e-4fd2-a8de-d48100876147" x="0" y="0" width="455" height="88"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA["T.C. AİLE, ÇALIŞMA VE SOSYAL HİZMETLER BAKANLIĞI - İŞ SAĞLIĞI VE GÜVENLİĞİ GENEL MÜDÜRLÜĞÜ" +"<br>"+
+
+"İş Sağlığı ve Güvenliği Kayıt, Takip ve İzleme Programı - İSG-KATİP - v9.19.01.10"
+
++ "<br>" + "İş Bu Belge İsg-Katip Üzerinden " +$P{dogrulamaKodu}+ " Doğrulama Kodu ile Alınmıştır."]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

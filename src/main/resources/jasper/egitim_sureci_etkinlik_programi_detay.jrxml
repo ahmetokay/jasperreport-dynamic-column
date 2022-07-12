@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="katilimbelgesi" pageWidth="1000" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="960" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60a0f717-3c1f-45e3-9871-4954cb81a10e">
+	<property name="ireport.zoom" value="0.9090909090909127"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="37"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="etkinlikProgramiList" uuid="5d0dba70-b552-444e-88d4-35a5614eff35">
+		<field name="oturumTarihi" class="java.util.Date"/>
+		<field name="oturumBaslangicSaati" class="java.lang.String"/>
+		<field name="oturumAdi" class="java.lang.String"/>
+		<field name="egiticiTcKimlikNo" class="java.lang.String"/>
+		<field name="egiticiEPosta" class="java.lang.String"/>
+		<field name="egiticiKonusmaciAdSoyad" class="java.lang.String"/>
+		<field name="egiticiTelefon" class="java.lang.String"/>
+		<field name="id" class="java.lang.Long"/>
+		<field name="oturumYeri" class="java.lang.String"/>
+		<field name="oturumBitisSaati" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="backlogo" class="java.awt.Image"/>
+	<parameter name="dogrulamaKoodu" class="java.lang.String"/>
+	<parameter name="dogrulamaKodu" class="java.lang.String"/>
+	<parameter name="barcode" class="java.awt.Image"/>
+	<parameter name="surecEgitimMufredatPlaniAdi" class="java.lang.String"/>
+	<parameter name="detsisAd" class="java.lang.String"/>
+	<parameter name="sgkUnvan" class="java.lang.String"/>
+	<parameter name="id" class="java.lang.Long"/>
+	<parameter name="yetkiBelgesiNo" class="java.lang.String"/>
+	<parameter name="programBaslangicTarihi" class="java.util.Date"/>
+	<parameter name="programBitisTarihi" class="java.util.Date"/>
+	<parameter name="katilimciSayisi" class="java.lang.Integer"/>
+	<parameter name="egitiminYapilacagiDerslikAdi" class="java.lang.String"/>
+	<field name="ad" class="java.lang.String"/>
+	<field name="bitisTarihi" class="java.util.Date"/>
+	<field name="baslangicTarihi" class="java.util.Date"/>
+	<field name="etkinlikProgramiList" class="java.util.Collection"/>
+	<field name="turAdi" class="java.lang.String"/>
+	<field name="id" class="java.lang.Long"/>
+	<title>
+		<band height="248">
+			<line>
+				<reportElement x="1" y="105" width="959" height="1" uuid="1e4a25fc-1c91-4cb0-b569-149d54ba3a86"/>
+			</line>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="788" y="106" width="172" height="20" uuid="e867599f-b90a-4f8d-8f80-1785a05ce3a1"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM, yyyy / HH:mm.ss", new Locale("tr")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="186" y="0" width="774" height="105" forecolor="#000099" backcolor="#FFFFFF" uuid="d72afb91-51a8-476c-847e-cbaf14a98cd0"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false" pdfEncoding="Cp1254"/>
+				</textElement>
+			</textField>
+			<image scaleImage="RealSize" hAlign="Center" vAlign="Middle">
+				<reportElement x="2" y="0" width="184" height="106" uuid="649e4d36-ac74-4d96-be83-244be63148c6"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="10" y="127" width="296" height="20" forecolor="#3333FF" backcolor="#FFFFFF" uuid="5b20de11-fade-4091-a22a-0bc4691e3ae9"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Etkinlik ID]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="319" y="127" width="307" height="20" forecolor="#000000" uuid="1dfcf22e-9f5c-40fa-9a91-f0b39b5f5076"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="306" y="127" width="13" height="20" forecolor="#3333FF" uuid="82f42170-d451-4d45-a696-5a8222d3593a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="319" y="148" width="307" height="20" forecolor="#000000" uuid="6a56d654-93d7-4bca-a60a-a703c1b3d455"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="306" y="148" width="13" height="20" forecolor="#3333FF" uuid="6a508747-197f-4d6a-b546-29724a1b0b5e"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="10" y="148" width="296" height="20" forecolor="#3333FF" backcolor="#FFFFFF" uuid="21cae911-a76c-453e-ae4e-fd309e4a2280"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Etkinlik  Adı]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="319" y="198" width="307" height="20" forecolor="#000000" uuid="15b00f4f-0d90-4cf7-b85c-72c54101d79b"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{baslangicTarihi})+" -- "+new SimpleDateFormat("dd/MM/yyyy").format($F{bitisTarihi})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="10" y="198" width="296" height="20" forecolor="#3333FF" backcolor="#FFFFFF" uuid="df4388c2-8a4e-4418-b2ff-9ebf649c8853"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Etkinlik Başlangıç Bitiş Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="306" y="195" width="13" height="20" forecolor="#3333FF" uuid="54535d67-ed92-4450-9b6a-73b7cc432159"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="320" y="171" width="307" height="20" forecolor="#000000" uuid="33ef6634-2ba3-41f3-a6c0-2369b37dbcc1"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{turAdi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="307" y="171" width="13" height="20" forecolor="#3333FF" uuid="f5cf8685-16c9-4f62-a0e2-ece627c979d3"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="11" y="171" width="296" height="20" forecolor="#3333FF" backcolor="#FFFFFF" uuid="fc753516-d4a5-4c4f-9f90-c0614a08a7d3"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Etkinlik  Türü]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="129">
+			<staticText>
+				<reportElement mode="Opaque" x="374" y="41" width="70" height="26" backcolor="#F08E19" uuid="e21d30e1-dcc5-43ca-8a6d-7ca97888cf9c"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Oturum Bit. Saati]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="547" y="41" width="113" height="26" backcolor="#F08E19" uuid="2dfbc930-f511-4635-a4a3-cab9a7f90741"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Eğitici Tc Kimlik No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="660" y="41" width="105" height="26" backcolor="#F08E19" uuid="f973c467-ece8-4b5a-a111-5056e9508e5e"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Eğitici Ad Soyad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="41" width="103" height="26" backcolor="#F08E19" uuid="2dd65f02-3009-4ab5-b8db-2b7bf17bf367"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Oturum Yeri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="76" y="41" width="109" height="26" backcolor="#F08E19" uuid="aae16bb7-e225-4130-9e63-1e52d2b4108b"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Oturum Adı ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="290" y="41" width="84" height="26" backcolor="#F08E19" uuid="88c43961-f166-4d15-9f0b-9c16b9128949">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Oturum Bş.Saati ]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table" style="table" x="0" y="69" width="980" height="30" uuid="84364a3a-16c1-4f99-a39b-ea2da48af7a9"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="etkinlikProgramiList" uuid="1f08b327-ee8b-4942-beb4-5a2d9f38b724">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{etkinlikProgramiList})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="76" uuid="300931a3-e08b-4a78-b420-6630d1c43be3">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="76" height="20" uuid="5a57342e-1189-4018-b390-2bbf6448ea26">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="109" uuid="643e333b-e437-4429-82de-33faff8ab4ec">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="109" height="20" uuid="1b9575ed-94a7-4857-92f2-d226fdffe490"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{oturumAdi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="104" uuid="37943791-05d1-4a28-970d-f1be9fab742d">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="104" height="20" uuid="9d0973c8-1828-42d9-8b72-d52a13d55ebf">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{oturumTarihi})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="84" uuid="9e6b6344-d19f-4fcc-892a-5dc12a37c176">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="84" height="20" uuid="913aa8cd-92a2-441d-b709-cac6e1561fdd"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{oturumBaslangicSaati}+":00"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="98b566cf-bfc4-4f11-a0ae-b02108ba03fa">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="20" uuid="700b427d-f1d4-4914-985e-ade5ab56547b">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{oturumBitisSaati}+":00"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="103" uuid="dd65a1a2-386d-4c8c-9311-05e15da30e03">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="103" height="20" uuid="0fc8d020-c73d-4b32-ae7f-cf2ddd6fed90"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{oturumYeri}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="113" uuid="6f4b8a80-a3a2-4fa1-a1e4-c6709f04d9b0">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="113" height="20" uuid="30e303ea-b6f1-4750-a677-bdd833ae9d7d"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{egiticiTcKimlikNo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="105" uuid="6fdfaae6-b6c2-4a6b-93af-46ab815ae5ec">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="105" height="20" uuid="005070c9-99d8-458c-b6a4-d447447c85c5"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{egiticiKonusmaciAdSoyad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="105" uuid="ff43c90d-e803-4e82-af1a-184fe5e0a962">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="105" height="20" uuid="525a0735-b4b1-4740-b3cf-68fd26002bc7"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{egiticiEPosta}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="02d17ddf-6b1d-4427-9f03-cb3ba2cb2ed4">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column10"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="e7d35614-9369-47fe-af04-19ed381c4077"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{egiticiTelefon}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement mode="Opaque" x="186" y="41" width="104" height="26" backcolor="#F08E19" uuid="2f034c31-e281-46ce-a28e-98ddc631be43">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Oturum Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="41" width="76" height="26" backcolor="#F08E19" uuid="f6d4090a-0ddc-4c1c-8046-03d6fadc570a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Oturum Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="765" y="41" width="105" height="26" backcolor="#F08E19" uuid="9fed4e6e-f964-4518-a34d-ce57ea65eba6"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Eğitici E-Posta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="870" y="41" width="90" height="26" backcolor="#F08E19" uuid="174f67aa-074d-4f34-8bab-67612277d4b5"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Eğitici Telefon]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="150">
+			<textField>
+				<reportElement x="-1" y="0" width="961" height="50" uuid="5a780b41-cee9-422b-a843-7333060472dc"/>
+				<textElement markup="html">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA["T.C. AİLE, ÇALIŞMA VE SOSYAL HİZMETLER BAKANLIĞI - İŞ SAĞLIĞI VE GÜVENLİĞİ GENEL MÜDÜRLÜĞÜ" +"<br>"+
+
+"İş Sağlığı ve Güvenliği Kayıt, Takip ve İzleme Programı - İSG-KATİP - v9.19.01.10"
+
++ "<br>" + "İş Bu Belge İsg-Katip Üzerinden " +$P{dogrulamaKodu}+ " Doğrulama Kodu ile Alınmıştır."]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="860" y="62" width="100" height="88" uuid="ac819f43-3a74-4947-9573-07c026cefa06"/>
+				<imageExpression><![CDATA[$P{barcode}]]></imageExpression>
+			</image>
+			<textField evaluationTime="Report">
+				<reportElement x="908" y="12" width="40" height="20" uuid="3cdc2d05-4fcf-40c5-ac60-74ef7702f1e2"/>
+				<textFieldExpression><![CDATA[" / " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="828" y="12" width="80" height="20" uuid="046e143d-fb59-4689-81dc-9dd714266533"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Sayfa "+$V{PAGE_NUMBER}+" "]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

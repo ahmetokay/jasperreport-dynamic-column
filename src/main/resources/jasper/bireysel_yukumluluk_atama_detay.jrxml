@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="yukumluluk" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60a0f717-3c1f-45e3-9871-4954cb81a10e">
+	<property name="ireport.zoom" value="1.9487171000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.background.image.properties" value="true,false,1.0,935,205,0,0,451,336"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="ilgili_mevzuatlar_dataset" uuid="ccb3e594-044b-4fd9-88ab-5b69489376da">
+		<field name="legisName" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="ilgili_mahkeme_komisyon_dataset" uuid="f28de067-cf3f-4cb5-873d-20a5a8f22cc2">
+		<field name="courtDcsnName" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="adi" class="java.lang.String"/>
+	<parameter name="obligId" class="java.lang.Long"/>
+	<parameter name="obligTpId" class="java.lang.String"/>
+	<parameter name="obligTpName" class="java.lang.String"/>
+	<parameter name="obligWrkTpId" class="java.lang.String"/>
+	<parameter name="obligWrkTpName" class="java.lang.String"/>
+	<parameter name="obligPartyTpId" class="java.lang.String"/>
+	<parameter name="obligPartyTpName" class="java.lang.String"/>
+	<parameter name="gnlGrpId" class="java.lang.String"/>
+	<parameter name="gnlGrpName" class="java.lang.String"/>
+	<parameter name="obligUpdRsnTpId" class="java.lang.String"/>
+	<parameter name="obligUpdRsnTpName" class="java.lang.String"/>
+	<parameter name="stId" class="java.lang.String"/>
+	<parameter name="stName" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="descr" class="java.lang.String"/>
+	<parameter name="sdate" class="java.util.Date"/>
+	<parameter name="edate" class="java.util.Date"/>
+	<parameter name="cdate" class="java.util.Date"/>
+	<parameter name="udate" class="java.util.Date"/>
+	<parameter name="cuser" class="java.lang.String"/>
+	<parameter name="uuser" class="java.lang.String"/>
+	<parameter name="period" class="java.lang.String"/>
+	<parameter name="cuserName" class="java.lang.String"/>
+	<parameter name="surec" class="java.lang.String"/>
+	<parameter name="surecAdi" class="java.lang.String"/>
+	<parameter name="filtre" class="java.lang.String"/>
+	<parameter name="mevzuat" class="java.lang.String"/>
+	<parameter name="mahkemeKarar" class="java.lang.String"/>
+	<parameter name="yukumlulukKapsamindakiKisiler" class="java.lang.String"/>
+	<parameter name="ozelStatuVerilenAdSoyad" class="java.lang.String"/>
+	<parameter name="ozelStatuVerilenTCKN" class="java.lang.String"/>
+	<parameter name="atanmaDurumu" class="java.lang.String"/>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="backlogo" class="java.awt.Image"/>
+	<parameter name="dogrulamaKoodu" class="java.lang.String"/>
+	<parameter name="dogrulamaKodu" class="java.lang.String"/>
+	<parameter name="barcode" class="java.awt.Image"/>
+	<field name="obligCourtDcsnRelEntityList" class="java.util.Collection"/>
+	<field name="obligLegisRelEntities" class="java.util.Collection"/>
+	<background>
+		<band height="802">
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement mode="Transparent" x="0" y="137" width="555" height="520" backcolor="#CCCCCC" uuid="df7b9d71-4fcc-401e-8af0-ba545861b3ca"/>
+				<imageExpression><![CDATA[$P{backlogo}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="384">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}.equals( 1 )]]></printWhenExpression>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="53" width="555" height="61" forecolor="#F20000" backcolor="#FFFFFF" uuid="23b889f5-a39a-4993-aa02-138dcf1344f6"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="Helvetica" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Bireysel Yükümlülük Atama
+Detay Görüntüleme Raporu]]></text>
+			</staticText>
+			<image scaleImage="RealSize" hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="190" height="89" uuid="2249c32c-1d91-4f75-9cf9-85849781ef59"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="134" width="555" height="1" uuid="1e4a25fc-1c91-4cb0-b569-149d54ba3a86"/>
+			</line>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="383" y="114" width="172" height="20" uuid="e867599f-b90a-4f8d-8f80-1785a05ce3a1"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM, yyyy / HH:mm.ss", new Locale("tr")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="137" width="137" height="20" backcolor="#FFFFFF" uuid="26058941-63c9-4bd4-908f-ea9fe0f0f8c4"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yükümlülük ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="177" width="138" height="20" backcolor="#FFFFFF" uuid="428851f2-4802-4a9b-8585-8e7076f158ae"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yükümlülük Adı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="197" width="138" height="20" backcolor="#FFFFFF" uuid="3b6d3063-0e2f-47fc-b520-ecbeadc2556e"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yükümlülük Çeşidi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="217" width="138" height="20" backcolor="#FFFFFF" uuid="2ba138b1-0606-41cf-86d2-fa4a5f60ecba"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yükümlülük Cinsi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="277" width="5" height="20" uuid="ea0a9a0f-276b-4a42-8fdb-89221c295e1b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="297" width="5" height="20" uuid="b65d1c0e-abfa-4370-b7e8-b5f188857321"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="317" width="5" height="20" uuid="efeab8e7-3a93-404c-91e2-1e9ef0e11821"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="137" width="412" height="20" uuid="ddc1076a-5ab8-4771-81ce-fb3b98cf85fb"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{obligId}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="177" width="412" height="20" uuid="2741f718-406d-46e4-8421-81c4dd0c18ec"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="197" width="412" height="20" uuid="8acb40f3-d90f-425c-9a96-f6ee814d1876"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{obligTpName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="217" width="412" height="20" uuid="9efda351-5f99-4cb4-abfb-f78405a74edc"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{obligWrkTpName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="138" y="137" width="5" height="20" uuid="c0eb775e-1902-4375-beb4-d6a158e5ebae"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="157" width="5" height="20" uuid="73a67d9a-45ed-4137-bfac-dedc26eff176"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="177" width="5" height="20" uuid="086c0f84-988a-43dc-a2d6-aa77c598be51"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="197" width="5" height="20" uuid="ef01594a-538a-4892-b6f0-bcc5662df90f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="217" width="5" height="20" uuid="a75343fb-ef59-4a22-8f80-8522141e1401"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="237" width="5" height="20" uuid="97eea8af-1af7-4ab1-994c-1543369cf008"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="257" width="5" height="20" uuid="95220bd0-7e56-4220-8d2b-d306d08f974b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="157" width="138" height="20" backcolor="#FFFFFF" uuid="b73bd375-083c-4db8-8de6-84dce6e7d881"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yükümlülük Türü]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="157" width="412" height="20" uuid="612cfd31-a667-4230-84d5-a69c7a5fc4a4"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{gnlGrpName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="237" width="138" height="20" backcolor="#FFFFFF" uuid="1a37d62d-30da-4332-b28e-4a4c12fa4e45"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yükümlülük Statüsü]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="237" width="412" height="20" uuid="8c6083b2-bdc1-4bf1-8931-6818f6254d11"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="257" width="138" height="20" backcolor="#FFFFFF" uuid="ffcd4800-8c77-4ea1-aab3-1ea81e59ae2e"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yükümlülük Tipi]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="257" width="412" height="20" uuid="d55ed12a-237f-4428-9eb2-de2f63cdd840"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{obligPartyTpName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="277" width="412" height="20" uuid="0a7c98fa-231f-4330-833c-73c0f1384b41"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{period}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="277" width="138" height="20" backcolor="#FFFFFF" uuid="2e022aa4-aa62-4587-b82a-2cfe454c4585"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yükümlülük Periyodu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="297" width="138" height="20" backcolor="#FFFFFF" uuid="6ee26d9b-f3a0-4ba2-868c-68cc1b7b3b22"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yükümlülük Başlangıç Tarihi]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="297" width="412" height="20" uuid="aa74da31-44a9-48bd-be7c-a7131dc9ca55"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd.MM.yyyy").format($P{sdate})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="317" width="138" height="20" backcolor="#FFFFFF" uuid="7b98bbff-ee9c-4138-a918-df43d5e068de"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yükümlülük Bitiş Tarihi]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="317" width="412" height="20" uuid="c89fbe8d-85f8-42c4-99bc-98371e6282ea"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd.MM.yyyy").format($P{edate})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="337" width="138" height="20" backcolor="#FFFFFF" uuid="7f42b57c-7633-4fde-8803-c9171b01f50a"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Atanma Durumu]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="337" width="412" height="20" uuid="03497297-b780-4091-bc50-94ff95f21ba5"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{atanmaDurumu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="357" width="138" height="20" backcolor="#FFFFFF" uuid="d353909b-75ea-4e87-a481-2026107a7e79"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Açıklama]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="143" y="357" width="412" height="20" uuid="ac46340f-6ccd-4cd0-8cf3-87e88ea2ad24"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{descr}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="66">
+			<componentElement>
+				<reportElement key="table" style="table" mode="Opaque" x="0" y="0" width="277" height="36" uuid="450ce0e0-4af8-4fd9-a26c-1e69a7bf5a19"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ilgili_mevzuatlar_dataset" uuid="a68e3e29-0ed6-4b0a-841f-3732eac39f64">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{obligLegisRelEntities})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="277" uuid="1d999c7d-23e6-42a8-8aea-37dc18cefd16">
+						<jr:tableHeader style="table_TH" height="18" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="277" height="18" uuid="28bb43c0-a37c-4b6a-8180-bfc002794b6b"/>
+								<box leftPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254"/>
+								</textElement>
+								<text><![CDATA[İlgili Mevzuat]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table_TD" height="18" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="277" height="18" uuid="4bf413ee-4bfe-4171-825a-56a1f5ff228f"/>
+								<box leftPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254" isPdfEmbedded="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{legisName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 1" style="table 1" x="280" y="0" width="277" height="36" uuid="d530d399-1bcb-4c28-b479-573422ccbde3"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ilgili_mahkeme_komisyon_dataset" uuid="2a530e00-1077-43d4-a8a7-290b44979f26">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{obligCourtDcsnRelEntityList})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="277" uuid="fcf8964d-d11a-45f1-ab09-6de33b92ec3c">
+						<jr:tableHeader style="table 1_TH" height="18" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="277" height="18" uuid="5d1e3877-45bd-44a0-a14c-24dce580aa43"/>
+								<box leftPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254"/>
+								</textElement>
+								<text><![CDATA[İlgili Mahkeme/Komisyon Kararı]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 1_TD" height="18" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="277" height="18" uuid="88b9b9eb-8d5c-48a7-997a-9145fc0ca731"/>
+								<box leftPadding="2" rightPadding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{courtDcsnName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="88">
+			<textField>
+				<reportElement x="0" y="28" width="555" height="50" uuid="5a780b41-cee9-422b-a843-7333060472dc"/>
+				<textElement markup="html">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA["T.C. AİLE, ÇALIŞMA VE SOSYAL HİZMETLER BAKANLIĞI - İŞ SAĞLIĞI VE GÜVENLİĞİ GENEL MÜDÜRLÜĞÜ" +"<br>"+
+
+"İş Sağlığı ve Güvenliği Kayıt, Takip ve İzleme Programı - İSG-KATİP - v9.19.01.10"
+
++ "<br>" + "İş Bu Belge İsg-Katip Üzerinden " +$P{dogrulamaKodu}+ " Doğrulama Kodu ile Alınmıştır."]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="455" y="0" width="100" height="88" uuid="ac819f43-3a74-4947-9573-07c026cefa06"/>
+				<imageExpression><![CDATA[$P{barcode}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="68" width="100" height="20" uuid="139f686d-0e02-4436-a0ae-aba583c995ae"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

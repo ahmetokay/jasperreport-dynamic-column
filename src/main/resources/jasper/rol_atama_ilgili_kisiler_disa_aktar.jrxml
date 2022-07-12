@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rol-yetkilendirme" pageWidth="1000" pageHeight="592" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="960" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="60a0f717-3c1f-45e3-9871-4954cb81a10e">
+	<property name="ireport.zoom" value="3.4522712143931042"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="roleId" class="java.lang.Long"/>
+	<field name="cdate" class="java.util.Date"/>
+	<field name="apluserName" class="java.lang.String"/>
+	<field name="kimlikNo" class="java.lang.Long"/>
+	<field name="stName" class="java.lang.String"/>
+	<field name="ozelStatuTarihi" class="java.util.Date"/>
+	<field name="atamadanCikisTarihi" class="java.util.Date"/>
+	<field name="ozelStatuName" class="java.lang.String"/>
+	<field name="apluserId" class="java.lang.Long"/>
+	<field name="kurumRowId" class="java.lang.Long"/>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="86" y="20" width="72" height="60" backcolor="#CCCCCC" uuid="35f1c0ae-f1a1-4542-a84f-fa26ba225037"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Rol ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="158" y="20" width="81" height="60" backcolor="#CCCCCC" uuid="63ee9725-f988-44a7-87d6-8272741895a0"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[İlişkili İşyeri ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="239" y="20" width="102" height="60" backcolor="#CCCCCC" uuid="402a5c62-18e9-4e89-857c-74f3fbfc962b"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[TC Kimlik No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="452" y="20" width="77" height="60" backcolor="#CCCCCC" uuid="2eefea31-3e59-4d5d-80bb-ed621971ffcf"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yetki Durumu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="341" y="20" width="111" height="60" backcolor="#CCCCCC" uuid="4148b426-5389-4721-92be-c566d2bee664"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Adı Soyadı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="529" y="20" width="111" height="60" backcolor="#CCCCCC" uuid="bf70b3b5-982f-48a3-b443-2738f564b0dc"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Atanma Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="838" y="20" width="104" height="60" backcolor="#CCCCCC" uuid="7882e709-3349-45ae-83aa-996f9a3ae7e7"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Özel Statü Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="640" y="20" width="99" height="60" backcolor="#CCCCCC" uuid="4b8d9efc-c493-402b-a24b-1db2006742d8"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Çıkış Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="739" y="20" width="99" height="60" backcolor="#CCCCCC" uuid="b7f0f3f7-ee12-407e-b5c2-33474ef268ca"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Özel Statü Durumu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="20" width="86" height="60" backcolor="#CCCCCC" uuid="b471b464-e1c1-4c2f-bc61-226f01e0f7c5"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Kişi ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="942" height="20" forecolor="#F20000" uuid="c0840785-3f10-45c2-8868-9b8287dfcc84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Rol Atama İlgili Kişiler Listesi]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="20">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="529" y="0" width="111" height="20" uuid="94e8f328-2b9f-4f12-a077-4fb6650535f2"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cdate}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="341" y="0" width="111" height="20" uuid="54901542-869b-466f-a174-143010401d3c"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apluserName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="86" height="20" uuid="5019c03b-f794-4ba5-8dc5-51960a454c21"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apluserId}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="739" y="0" width="99" height="20" uuid="b33e15ff-2da3-497b-a352-65a1d387798f"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ozelStatuName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="86" y="0" width="72" height="20" uuid="8bf4cbd3-dfcf-4d60-9291-9179173a5bee"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{roleId}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="158" y="0" width="81" height="20" uuid="25784fbb-136d-4523-ace4-8477b861d04e"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kurumRowId}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="239" y="0" width="102" height="20" uuid="6ad005f0-d61d-4135-998d-02a6d1b16291"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kimlikNo}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="452" y="0" width="77" height="20" uuid="3e19ac21-11de-434d-a744-43dccebcc801"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="640" y="0" width="99" height="20" uuid="3ec68d72-2ddd-48f4-bdf2-f892206adc1b"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{atamadanCikisTarihi}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="838" y="0" width="104" height="20" uuid="31c0b944-aed7-4ee8-adef-dbaa3da408be"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ozelStatuTarihi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

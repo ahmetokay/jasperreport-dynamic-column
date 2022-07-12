@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sikayet" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60a0f717-3c1f-45e3-9871-4954cb81a10e">
+	<property name="ireport.zoom" value="1.948717100000004"/>
+	<property name="ireport.x" value="52"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.background.image.properties" value="true,false,1.0,935,205,0,0,451,336"/>
+	<parameter name="compTpName" class="java.lang.String"/>
+	<parameter name="compGrvntName" class="java.lang.String"/>
+	<parameter name="compDate" class="java.util.Date"/>
+	<parameter name="compExtId" class="java.lang.String"/>
+	<parameter name="compPersonId" class="java.lang.Long"/>
+	<parameter name="compPersonName" class="java.lang.String"/>
+	<parameter name="compPersonWrkOrgId" class="java.lang.Long"/>
+	<parameter name="compPersonWrkOrgName" class="java.lang.String"/>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="compRewDate" class="java.util.Date"/>
+	<parameter name="compLvlTpName" class="java.lang.String"/>
+	<parameter name="cityName" class="java.lang.String"/>
+	<parameter name="statusName" class="java.lang.String"/>
+	<parameter name="compStatusName" class="java.lang.String"/>
+	<parameter name="descr" class="java.lang.String"/>
+	<parameter name="sikayetEdilenler" class="java.lang.String"/>
+	<parameter name="gorev" class="java.lang.String"/>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="backlogo" class="java.awt.Image"/>
+	<parameter name="dogrulamaKoodu" class="java.lang.String"/>
+	<parameter name="dogrulamaKodu" class="java.lang.String"/>
+	<parameter name="barcode" class="java.awt.Image"/>
+	<parameter name="period" class="java.lang.String"/>
+	<parameter name="sikayetEdilenlerKisiTCKN" class="java.lang.String"/>
+	<parameter name="sikayetEdilenlerKisiAdSoyad" class="java.lang.String"/>
+	<parameter name="sikayetEdilenlerIsyeriId" class="java.lang.String"/>
+	<parameter name="sikayetEdilenlerIsyeriUnvan" class="java.lang.String"/>
+	<parameter name="sikayetEdilenlerIsyeriIl" class="java.lang.String"/>
+	<background>
+		<band height="802">
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement mode="Transparent" x="0" y="137" width="555" height="520" backcolor="#CCCCCC" uuid="df7b9d71-4fcc-401e-8af0-ba545861b3ca"/>
+				<imageExpression><![CDATA[$P{backlogo}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="654">
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="275" width="250" height="21" backcolor="#FFFFFF" uuid="bf70b3b5-982f-48a3-b443-2738f564b0dc"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet Eden Kişinin İlişkili Olduğu Kurum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="376" width="250" height="20" backcolor="#FFFFFF" uuid="7dfb38f5-c5f5-4f6b-ae49-1684b9a29147"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet İli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="396" width="250" height="20" backcolor="#FFFFFF" uuid="7882e709-3349-45ae-83aa-996f9a3ae7e7"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Durum Statüsü]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="416" width="250" height="20" backcolor="#FFFFFF" uuid="7f1061b2-0a13-46c8-9aad-7a485cd3dbf2"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[İşlem Statüsü]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="275" width="300" height="21" uuid="68b2a826-3e23-4cda-a860-74659f330f50"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compPersonWrkOrgName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="376" width="300" height="20" uuid="2df58c32-345b-433c-aa97-349d6bd94bf8"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cityName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="396" width="300" height="20" uuid="2843fcb3-479f-40c4-8f8c-b52f3a8f4356"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{statusName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="416" width="300" height="20" uuid="642a35f2-b52b-4a87-9407-de48f5df36e0"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compStatusName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="275" width="5" height="21" uuid="40d829aa-360c-4692-8ca3-c7990a3751dd"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="296" width="5" height="20" uuid="3bbb5f95-509c-44c5-b492-cc091beabfdf"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="316" width="5" height="20" uuid="8b47e1e1-d45d-4075-a09c-383f2516576d"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="336" width="5" height="20" uuid="84edbcd5-709c-4cb4-a889-fb30620fdf92"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="135" width="250" height="20" backcolor="#FFFFFF" uuid="35f1c0ae-f1a1-4542-a84f-fa26ba225037"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Tür ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="155" width="250" height="20" backcolor="#FFFFFF" uuid="63ee9725-f988-44a7-87d6-8272741895a0"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Tür]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="175" width="250" height="20" backcolor="#FFFFFF" uuid="402a5c62-18e9-4e89-857c-74f3fbfc962b"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Kaynak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="195" width="250" height="20" backcolor="#FFFFFF" uuid="2eefea31-3e59-4d5d-80bb-ed621971ffcf"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Tarih]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="215" width="250" height="20" backcolor="#FFFFFF" uuid="23892e11-3872-4502-a4f6-1095da439abe"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Evrak No/Alo 170 No/Cimer No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="235" width="250" height="20" backcolor="#FFFFFF" uuid="4148b426-5389-4721-92be-c566d2bee664"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet Eden Adı Soyadı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="255" width="250" height="20" backcolor="#FFFFFF" uuid="e650f7ba-6c9c-4dcf-af56-334048f7a3a4"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet Eden TCKN]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="135" width="300" height="20" uuid="832bcef8-5a80-4f8f-99ec-65adca496392"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compTpName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="155" width="300" height="20" uuid="aa6cee26-f0c7-481d-a946-462121019d06"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compTpName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="175" width="300" height="20" uuid="d8b5fd14-b65d-4e53-84da-9a5182a8aa27"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compGrvntName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="195" width="300" height="20" uuid="8e09144d-7722-4793-aae2-347a60d7281a"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($P{compDate})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="215" width="300" height="20" uuid="a8dfbd04-4dba-421e-a261-6d7c32a34c6d"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compExtId}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="235" width="300" height="20" uuid="b0970e98-63d2-4e7f-a363-75f26a8d74c8"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compPersonName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="255" width="300" height="20" uuid="99be7859-806a-48e2-a95a-30575baabf17"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compPersonId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="135" width="5" height="20" uuid="b6d0fc38-408c-46e3-a331-b9c724766357"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="155" width="5" height="20" uuid="4b7c12f5-758c-44f7-9452-1d7a977ba828"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="175" width="5" height="20" uuid="8f01e19e-17f2-4c4c-8868-77ff8e34f853"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="195" width="5" height="20" uuid="fcb6baec-d38c-4ac2-bbf4-b6851f9e734b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="215" width="5" height="20" uuid="2726b706-7b37-4d54-b4fe-8607777a09a4"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="235" width="5" height="20" uuid="59353cf9-4332-4fd6-9bf8-f2f39f7268fb"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="255" width="5" height="20" uuid="4cc138a8-9ae7-4cca-9732-ee06a7a8fc93"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="53" width="555" height="61" forecolor="#F20000" backcolor="#FFFFFF" uuid="23b889f5-a39a-4993-aa02-138dcf1344f6"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" pdfFontName="Helvetica" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet Listeleme
+Detay Görüntüleme Raporu]]></text>
+			</staticText>
+			<image scaleImage="RealSize" hAlign="Center" vAlign="Middle">
+				<reportElement x="1" y="0" width="190" height="89" uuid="2249c32c-1d91-4f75-9cf9-85849781ef59"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="134" width="555" height="1" uuid="1e4a25fc-1c91-4cb0-b569-149d54ba3a86"/>
+			</line>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="383" y="114" width="172" height="20" uuid="e867599f-b90a-4f8d-8f80-1785a05ce3a1"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM, yyyy / HH:mm.ss", new Locale("tr")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="316" width="300" height="20" uuid="1f8b5eae-b453-466d-b4e3-ab17814abb97"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="356" width="250" height="20" backcolor="#FFFFFF" uuid="3d71ff9a-90a8-42fc-9888-134baf02849d"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Önem Derecesi]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="296" width="300" height="20" uuid="2bbe8360-67a1-4476-a113-3dd8102e88cb"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compPersonWrkOrgId}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="356" width="300" height="20" uuid="e0d9bcac-8b5d-4308-b100-b790cd2d29f0"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compLvlTpName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="296" width="250" height="20" backcolor="#FFFFFF" uuid="93b74efb-436b-45c3-be0e-fa673ac72d1a"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet Eden Kişinin İlişkili Olduğu Kurum ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="316" width="250" height="20" backcolor="#FFFFFF" uuid="39393fce-4636-4651-9c05-60e8c08d9010"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet Konusu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="356" width="5" height="20" uuid="2af5462e-e2f8-4d0b-8be3-92d007a29974"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="376" width="5" height="20" uuid="a3bd452a-6ed8-4871-a9f9-996a3e0ac502"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="396" width="5" height="20" uuid="6aa66c1d-a6e6-4b70-a214-43fb7a6daa75"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="336" width="250" height="20" backcolor="#FFFFFF" uuid="a0270fed-0c7c-4ddd-bc42-779abdaa4aad"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[İnceleme Tarihi]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="336" width="300" height="20" uuid="9e8a5014-70af-4441-87d4-3a9de4974df6"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($P{compRewDate})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="416" width="5" height="20" uuid="f7666141-90d8-468c-9411-f90ca4fbadea"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="436" width="250" height="20" backcolor="#FFFFFF" uuid="90cf085c-4390-479b-85ff-053b5398ab21"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Açıklama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="456" width="250" height="20" backcolor="#FFFFFF" uuid="9308c523-3475-4cbc-ab5f-50d390daa374"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[İlgili Görevler]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="436" width="5" height="20" uuid="ee140eeb-c081-4542-a584-5557d46c7b29"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="456" width="5" height="20" uuid="c914bac9-28c5-4531-a84c-3e6aeed6e2c8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="436" width="300" height="20" uuid="08722c6f-3208-4160-837b-4478f8cab728"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{descr}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="456" width="300" height="20" uuid="bab23e1e-5def-48e4-9fd3-8b91a0816411"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{gorev}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="592" width="300" height="20" uuid="d86d10d6-f556-460f-bb49-49f964b95fad"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sikayetEdilenlerIsyeriUnvan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="592" width="5" height="20" uuid="518cde5d-ddbb-4f5e-8632-ba306768b0de"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="592" width="250" height="20" backcolor="#FFFFFF" uuid="21d39253-6b29-46c9-9ec9-0c75423fff23"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet Edilen İşyeri Unvanı]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="612" width="300" height="20" uuid="a2975993-e002-46ad-b3a5-d14faa0eff99"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sikayetEdilenlerIsyeriIl}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="612" width="5" height="20" uuid="28d88a41-f35f-4036-bd05-b962508efc73"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="612" width="250" height="20" backcolor="#FFFFFF" uuid="a60741fd-db4b-4a1f-b43f-ac7840323c81"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet Edilen İşyeri İli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="572" width="250" height="20" backcolor="#FFFFFF" uuid="df47dd31-ee8b-4f19-bf2f-b7e5eedaf893"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şİkayet Edilen İşyeri ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="572" width="5" height="20" uuid="a66f17d0-c4ba-448c-b105-add8e4484f1c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="572" width="300" height="20" uuid="c14a0818-4e54-4fac-9ca3-ea611b6ea1ac"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sikayetEdilenlerIsyeriId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="552" width="5" height="20" uuid="6fb5c95d-70f7-4a4e-a8a8-e3311c1a9d62"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="552" width="250" height="20" backcolor="#FFFFFF" uuid="9ad54bcd-e158-4bd6-b354-05dd18e20fc3"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet Edilen Ad-Soyad]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="552" width="300" height="20" uuid="faa92d83-74cf-482a-a99b-19f2cfc689a2"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sikayetEdilenlerKisiAdSoyad}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="532" width="300" height="20" uuid="0a938c52-b404-4a26-9e5e-1945e55d7f8d"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sikayetEdilenlerKisiTCKN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="532" width="250" height="20" backcolor="#FFFFFF" uuid="bcbfa1ef-1dad-438e-985f-89fe95f1738e"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Şikayet Edilen TCKN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="532" width="5" height="20" uuid="bbb279c4-d6f3-4a41-a9c9-990c24a4c942"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" mode="Transparent" x="0" y="496" width="555" height="36" isPrintWhenDetailOverflows="true" forecolor="#F20000" uuid="b74bd91f-00fe-4ce8-a838-1e0af585f9ef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" isBold="true" isItalic="false" pdfEncoding="Cp1254" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Şikayet Edilen Kişi/İşyeri Bilgisi]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="255" y="476" width="300" height="20" uuid="031009c0-4052-412d-a8ce-ea5733d31d0e"/>
+				<box leftPadding="0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="10" pdfEncoding="Cp1254"/>
+				</textElement>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="476" width="5" height="20" uuid="b35d587d-e8e7-40af-ad3f-5151b99be0c3"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="476" width="250" height="20" backcolor="#FFFFFF" uuid="661651ac-055f-4703-831d-c2b5f5e42963"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[ilgili Denetim Id]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="88">
+			<textField>
+				<reportElement x="0" y="28" width="555" height="50" uuid="5a780b41-cee9-422b-a843-7333060472dc"/>
+				<textElement markup="html">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA["T.C. AİLE, ÇALIŞMA VE SOSYAL HİZMETLER BAKANLIĞI - İŞ SAĞLIĞI VE GÜVENLİĞİ GENEL MÜDÜRLÜĞÜ" +"<br>"+
+
+"İş Sağlığı ve Güvenliği Kayıt, Takip ve İzleme Programı - İSG-KATİP - v9.19.01.10"
+
++ "<br>" + "İş Bu Belge İsg-Katip Üzerinden " +$P{dogrulamaKodu}+ " Doğrulama Kodu ile Alınmıştır."]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="455" y="0" width="100" height="88" uuid="ac819f43-3a74-4947-9573-07c026cefa06"/>
+				<imageExpression><![CDATA[$P{barcode}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

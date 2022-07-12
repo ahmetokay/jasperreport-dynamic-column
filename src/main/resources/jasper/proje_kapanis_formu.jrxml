@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sinav_detay" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb0b1be1-7c64-47a8-85c6-fb278121ab5f">
+	<property name="ireport.zoom" value="1.331000000000027"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="yil_harcama_list_dataset" uuid="f63cb1a3-acb7-4e0d-b81b-29cb6e7d1e8a">
+		<field name="yil" class="java.lang.Integer"/>
+		<field name="cariFiyatDis" class="java.math.BigDecimal"/>
+		<field name="cariFiyatToplam" class="java.math.BigDecimal"/>
+		<field name="cariFiyatKamulastirma" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="proje_butce_kalemleri_dataset" uuid="7b8ccb11-f360-4ecc-aa64-df3ad934246d">
+		<field name="butceKalemiAdi" class="java.lang.String"/>
+		<field name="miktar" class="java.math.BigDecimal"/>
+	</subDataset>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="barcode" class="java.awt.Image"/>
+	<parameter name="backlogo" class="java.awt.Image"/>
+	<parameter name="dogrulamaKodu" class="java.lang.String"/>
+	<field name="projeAdi" class="java.lang.String"/>
+	<field name="projeSektorAltSektor" class="java.lang.String"/>
+	<field name="planlananProjeBaslangicTarihi" class="java.util.Date"/>
+	<field name="planlananProjeBitisTarihi" class="java.util.Date"/>
+	<field name="gerceklesenProjeBaslangicTarihi" class="java.util.Date"/>
+	<field name="gerceklesenProjeBitisTarihi" class="java.util.Date"/>
+	<field name="projeSozlesmeTarihi" class="java.util.Date"/>
+	<field name="ypadProjeNo" class="java.lang.String"/>
+	<field name="ypadProjeAmaci" class="java.lang.String"/>
+	<field name="ypadProjeYeri" class="java.lang.String"/>
+	<field name="ypadKarakteristigi" class="java.lang.String"/>
+	<field name="ypadFizikiHedefi" class="java.lang.String"/>
+	<field name="resdProjeNo" class="java.lang.String"/>
+	<field name="resdProjeAmaci" class="java.lang.String"/>
+	<field name="resdProjeYeri" class="java.lang.String"/>
+	<field name="resdKarakteristigi" class="java.lang.String"/>
+	<field name="resdFizikiHedefi" class="java.lang.String"/>
+	<field name="projeninCiktisiSonucu" class="java.lang.String"/>
+	<field name="projedenBeklenenEldeEdilenFaydalar" class="java.lang.String"/>
+	<field name="projeninKalkinmaEksenleriKatkisi" class="java.lang.String"/>
+	<field name="yapilanIslerSorunlarCozumler" class="java.lang.String"/>
+	<field name="gelecegeIliskinCikarilanDersler" class="java.lang.String"/>
+	<field name="projeButceKaynagiAdi" class="java.lang.String"/>
+	<field name="projeButce" class="java.math.BigDecimal"/>
+	<field name="yilHarcamaList" class="java.util.Collection"/>
+	<field name="projeButceKalemiDTOList" class="java.util.Collection"/>
+	<background>
+		<band height="802">
+			<image>
+				<reportElement uuid="15c3c1f5-12a8-4082-9d1e-e796f332d97c" x="0" y="0" width="555" height="802"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<imageExpression><![CDATA[$P{backlogo}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="20">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e2c0fd2a-dc70-4e3f-bc9e-91dd1d082aff" x="0" y="0" width="555" height="20"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM, yyyy / HH:mm.ss", new Locale("tr")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="02a29d7e-4616-4b9c-93d1-b295c7251852" x="0" y="0" width="555" height="20"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Kapanış Raporu]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="246">
+			<staticText>
+				<reportElement uuid="437e6178-a2b7-4815-993c-c6e4e72522a4" x="0" y="48" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5e8c3dab-b140-4e34-b851-c7ba7a7b76a0" x="0" y="66" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Adı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="56f3cd2b-808d-4a4c-a5a3-a8ceba96b32c" x="0" y="84" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sektör/ Altsektör]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d956e85c-45d2-4406-b671-35ff085920d5" x="0" y="102" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Amacı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="01a3faf4-e3e9-4f53-9896-8a35fcee4026" x="0" y="120" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Yeri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4dbbe150-69ef-4390-a24e-fe76e8372214" x="0" y="138" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Karakteristiği]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0ccc313d-5e12-46e5-acf6-09e0ca42a5d9" x="0" y="156" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Fiziki Hedefi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1cc955d0-7418-481f-ad71-591a37c45000" x="0" y="174" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Başlama-Bitiş Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8188fcb3-6d44-48f1-a215-ff55530a62d0" x="0" y="210" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Bütçe Kaynağı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a7d23bf-b1d0-4404-bd31-7bd44fc26129" x="0" y="192" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Sözleşmesi Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2f872ef3-4ba0-41fa-a8a6-3a2cc964738f" x="0" y="228" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Proje Bütçesi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d00d6289-e3ff-4c60-bf6d-4dbfab3ee124" x="0" y="30" width="129" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3c4e41ea-2d9c-4b09-8f29-f7a557fd4613" x="129" y="30" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yatırım Programına Alınış Değeri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="25b8c0e5-740d-4f2b-9402-cff87079dc08" x="342" y="30" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Revize Edilmiş Son Değerler]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7ed6a93f-de3c-4087-9a2b-f36082b332c8" x="0" y="0" width="555" height="30"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projenin Yatırım Programı Parametreleri]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="29fe1530-52ee-4adf-99fb-fbaf94286d16" x="129" y="48" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ypadProjeNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4db439a4-62af-4796-a9b3-88defb54de69" x="342" y="48" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{resdProjeNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d0af5488-494e-4f34-9dc9-bd0b9b79fd5d" x="129" y="66" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeAdi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="be3595c0-ef1f-4fc8-840b-a8d56174721f" x="342" y="66" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeAdi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="32f146c5-48b8-4143-b43c-1cb2a49dfd5f" x="129" y="84" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeSektorAltSektor}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9cf66d66-2816-4a59-ad67-e13d3dbfd3ad" x="342" y="84" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeSektorAltSektor}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="327689ba-f381-4960-8b52-29ec836fca60" x="129" y="102" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ypadProjeAmaci}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="008e658c-e650-41a7-bffe-bb0cb8e7b766" x="342" y="102" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{resdProjeAmaci}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="06da033a-65e2-448c-8468-7a86234d253f" x="129" y="120" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ypadProjeYeri}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="df6671a5-8330-40f0-b581-da110a5d9b64" x="342" y="120" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{resdProjeYeri}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a11a0561-111a-4a6d-a31e-64bfabe0870c" x="129" y="138" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ypadKarakteristigi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5b275c50-720b-4273-a4a0-52ee848f0782" x="342" y="138" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{resdKarakteristigi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6ab92947-787f-4c2a-8e77-62ba7e6639f7" x="129" y="156" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ypadFizikiHedefi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="838ed0c6-51f9-43fa-a88b-f29fd139b12f" x="342" y="156" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{resdFizikiHedefi}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="41487875-27c2-457b-98ff-860534a0ac58" x="129" y="174" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(new SimpleDateFormat("dd/MM/yyyy")).format($F{planlananProjeBaslangicTarihi})+ " - " + (new SimpleDateFormat("dd/MM/yyyy")).format($F{planlananProjeBitisTarihi})]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="fb4dae5c-857e-46f7-b0a4-aa929faba100" x="129" y="192" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeSozlesmeTarihi}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="3815ea7a-90ab-400e-9c5a-df8c1bbc9cf8" x="342" y="174" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(new SimpleDateFormat("dd/MM/yyyy")).format($F{gerceklesenProjeBaslangicTarihi})+ " - " + (new SimpleDateFormat("dd/MM/yyyy")).format($F{gerceklesenProjeBitisTarihi})]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="81d94b67-2e68-4e6f-8cdd-dad76c6e1ef7" x="342" y="192" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7b30a709-ad45-4d4d-a95d-3d4b7aa557cb" x="129" y="210" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeButceKaynagiAdi}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement uuid="9a1e91a7-bfa6-4a44-be0c-ba9198ea8eca" x="129" y="228" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeButce}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="bdd55910-3137-4ed3-a798-d5dcfcbcd4ea" x="342" y="210" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="6118c5d0-7cdd-421f-80a6-9fc3f2f2781e" x="342" y="228" width="213" height="18"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="48">
+			<staticText>
+				<reportElement uuid="fff95dd2-7f71-4f3b-aa91-cadfa5a66d76" x="0" y="0" width="555" height="30"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Bütçe Kalemleri]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="540f8a50-b551-4008-bbd6-04c62294672a" key="table 1" style="table 1" mode="Transparent" x="0" y="30" width="555" height="18"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="proje_butce_kalemleri_dataset" uuid="98490174-f541-496f-949e-6632f61ca5ee">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{projeButceKalemiDTOList})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="277" uuid="a3364200-2c05-408c-97e9-f2839897eae4">
+						<jr:detailCell height="18" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="64ca2fb4-1476-4833-a861-489d3af80a7a" mode="Transparent" x="0" y="0" width="277" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="8" pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{butceKalemiAdi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="278" uuid="e6aa4f99-3938-4c41-9954-e0c742dcf983">
+						<jr:detailCell height="18" rowSpan="1">
+							<textField pattern="#,##0.00" isBlankWhenNull="true">
+								<reportElement uuid="9c11bac8-041d-4fe6-9685-45070c8d6696" mode="Transparent" x="0" y="0" width="278" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="8" pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{miktar}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="66">
+			<staticText>
+				<reportElement uuid="ee3b6098-f410-4c53-b08c-49b7340b4d8c" x="0" y="0" width="555" height="30"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yıllar İtibarıyla Yapılan Harcama(**)]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="c00ca3ad-b86f-485e-84d6-8be96076225e" key="table" style="table" positionType="Float" x="0" y="30" width="555" height="36" isPrintWhenDetailOverflows="true"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="yil_harcama_list_dataset" uuid="a8f2e064-8c1c-4cdb-82f2-b56679fa408f">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{yilHarcamaList})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="159" uuid="eb3d05dc-e43e-4305-aaa4-0cf45eefb78d">
+						<jr:columnHeader height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="b34e7f48-a459-4aef-bb9b-3fdeca11a06e" x="0" y="0" width="159" height="18"/>
+								<textElement/>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="18" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement uuid="ee7c2ec9-8492-4b3f-9814-dcaf313530ee" x="0" y="0" width="159" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{yil}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="132" uuid="605834fd-cb78-4d82-8fae-b4656e024762">
+						<jr:columnHeader height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="e5a1313d-7540-4a7c-814e-b2c58825831f" x="0" y="0" width="132" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" pdfEncoding="Cp1254"/>
+								</textElement>
+								<text><![CDATA[Dış]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="18" rowSpan="1">
+							<textField pattern="#,##0.00" isBlankWhenNull="true">
+								<reportElement uuid="c4bfc39c-fad2-487b-8770-f2c4866955a7" x="0" y="0" width="132" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cariFiyatDis}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="132" uuid="728251e0-b175-4c11-8bd7-d50fe9250834">
+						<jr:columnHeader height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="64012f41-2a3c-4759-a256-3ec56b42fb6b" x="0" y="0" width="132" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" pdfEncoding="Cp1254"/>
+								</textElement>
+								<text><![CDATA[Toplam(*)]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="18" rowSpan="1">
+							<textField pattern="#,##0.00" isBlankWhenNull="true">
+								<reportElement uuid="e04b73e7-4215-4b95-850b-f856d29f7300" x="0" y="0" width="132" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cariFiyatToplam}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="132" uuid="c6528e60-3515-4901-9ca0-ff66cf80fb61">
+						<jr:columnHeader height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="ef6f6700-868e-4400-acd1-f0da8131494a" x="0" y="0" width="132" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" pdfEncoding="Cp1254"/>
+								</textElement>
+								<text><![CDATA[Kamulastirma]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="18" rowSpan="1">
+							<textField pattern="#,##0.00" isBlankWhenNull="true">
+								<reportElement uuid="4144db22-c059-4018-8d3b-0280b29dde33" x="0" y="0" width="132" height="18"/>
+								<box leftPadding="2" rightPadding="2">
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cariFiyatKamulastirma}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="205">
+			<staticText>
+				<reportElement uuid="908d0da5-2769-409a-9325-4328f1c746aa" x="0" y="0" width="555" height="30"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Ulaşılan Sonuçlar, Karşılaşılan Sorunlar, Getirilen Çözümler, Çıkarılan Dersler]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="66a98f3f-80ec-4945-8daf-5fd0dab5cd95" x="0" y="30" width="129" height="35"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projenin Çıktısı/Sonucu(Ürünü)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="81500e66-6ef0-4cb9-87c1-6c8032758ce0" x="0" y="65" width="129" height="35"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projeden Beklenen ve Elde Edilen Faydalar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="87cd74aa-c292-432f-a5b8-84eeec82182d" x="0" y="100" width="129" height="35"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Projenin Kalkınma Eksenleri ve Sektörel Plan Hedefleriyle İlişkisi ve Katkısı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="67c15fa2-44fe-4cce-9e72-565c82e63c92" x="0" y="135" width="129" height="35"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Yapılanİşler,Uygulamada Karşılaşılan Sorunlar,  Nedenleri ve Nasıl Çözüldüğü]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f9beeeef-3c4b-49f6-a1c0-0ced19fdacd3" x="0" y="170" width="129" height="35"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Geleceğe İlişkin Çıkarılan Dersler]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b787fd08-fbd5-4c40-adff-a0774170c918" x="129" y="30" width="426" height="35"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeninCiktisiSonucu}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="be2838bd-ccf9-48e8-ad8d-9f1bfb0111d5" x="129" y="65" width="426" height="35"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projedenBeklenenEldeEdilenFaydalar}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="913c6576-0b1d-428a-a87c-9ca777c92079" x="129" y="100" width="426" height="35"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeninKalkinmaEksenleriKatkisi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="19aaa809-1403-47ab-99e0-94d569f59f19" x="129" y="135" width="426" height="35"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yapilanIslerSorunlarCozumler}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5446357d-d88b-4756-86fb-74362aa68cc9" x="129" y="170" width="426" height="35"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gelecegeIliskinCikarilanDersler}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

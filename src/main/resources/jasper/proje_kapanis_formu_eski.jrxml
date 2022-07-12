@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="proje_kapanis_formu" language="groovy" pageWidth="656" pageHeight="911" columnWidth="616"
+              leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20"
+              uuid="19493771-dffb-4ff1-80f5-b13e19aa120c">
+    <property name="ireport.zoom" value="1.6105100000000008"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="480"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band splitType="Stretch"/>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch">
+            <staticText>
+                <reportElement uuid="ff962509-e6e9-4790-8774-85ef29fd56a8" x="50" y="7" width="552" height="27"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Projenin Yatırım Programı Parametreleri]]></text>
+            </staticText>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="708" splitType="Stretch">
+            <staticText>
+                <reportElement uuid="c6601eab-d2d9-4cf7-a44c-f3eabbdb7601" x="393" y="0" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Revize Edilmiş Son Değerler]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="d5c0c164-427c-41d4-b238-7b91a88ebc11" x="185" y="0" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Yatırım Programına Alınış Değerleri]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="213f1127-d2df-4aaa-84f9-f2a47f105c3c" x="50" y="0" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement/>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="654ab023-e46e-4ef9-9b26-4c7aa3c3612b" x="185" y="20" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="ad9f3226-5101-4c94-87ee-0f43d5a2cfe4" x="393" y="20" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="488797fd-5228-46eb-a549-4b9d914c52a5" x="50" y="20" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[  Proje No]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="13b016bf-2b51-4087-8479-fc4fb518dd48" x="50" y="40" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[  Proje Adı]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="24dc96b9-7578-4a75-9d62-9a3add8a8b10" x="393" y="40" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="7e6e9b5e-f9c5-4b1d-ab11-59b5126d43ce" x="185" y="40" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="923cd644-d14e-48f4-b7eb-a93008d5e182" x="50" y="60" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[  Sektör / Alt Sektör]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="dace3b3f-e156-41f0-a837-d2deab00d0d5" x="393" y="60" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="ece1481d-6f68-49c6-9c9a-c7c61962d426" x="185" y="60" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="22656d47-6da4-494f-8b89-7b8c65eee724" x="50" y="80" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[  Proje Amacı]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="c37b2193-3ca4-4075-ab5a-46becb30f912" x="393" y="80" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="c9c2fa6c-dfe9-4abf-ab32-1e9a271a8b6e" x="185" y="80" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="b39d21a2-2975-4b9e-840c-e799da627139" x="50" y="100" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[  Proje Yeri]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="da80afc1-2425-48a8-b4aa-157c3b27c6ed" x="393" y="100" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="8bc58ae7-f72e-49ea-9615-5765d2e5c0ea" x="185" y="100" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="5ad21cac-7080-485d-a79f-a4f15fc4806c" x="50" y="120" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[  Karakteristiği]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="232f905f-4430-42ac-a281-81efed42ae3b" x="393" y="120" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="0d13f754-59c0-474c-9609-df5d3e3ac7d4" x="185" y="120" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="cbcb40f3-e245-43c7-8326-d8238ded66f0" x="50" y="140" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[  Fiziki Hedefi]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="10dfcd60-e0b4-4cab-8d4e-3bb87588cf2e" x="393" y="140" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="23fe7130-65f3-4729-a0b6-e4e36c3f8099" x="185" y="140" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="87a27566-2148-40a9-a586-0a5463699734" x="50" y="160" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[  Başlama - Bitiş Tarihi]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="e0715cc1-fcc9-4f7f-9f74-a88532072694" x="393" y="160" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="2da98dda-58ce-4d15-b68f-a4067d940b97" x="185" y="160" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="358b6961-082b-4759-8036-a7b09290d786" x="393" y="180" width="209" height="30"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="04bfac75-66c3-4ca3-9c5d-067c9b6c73b4" x="50" y="180" width="135" height="30"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[  Proje Sözleşmesi Tarihi]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="e7908f49-20dc-4746-ab14-6e65dfa6e8fe" x="185" y="180" width="208" height="30"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="08e7ec7c-806a-43f2-a6ad-cb45d80d533b" x="287" y="180" width="106" height="30"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.0"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.0"/>
+                    <rightPen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Sözleşme İhale Bedeli]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="3c3b16ac-ad54-4018-8235-18b0f92d1138" x="50" y="210" width="135" height="30"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[  Proje Sözleşmesi]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="45b82c92-ce65-498a-80d9-fe744f4234c0" x="185" y="210" width="208" height="30"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="58721d2a-c24b-4229-9e47-78672ccb9532" x="185" y="210" width="42" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Dış]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="1622755d-f82f-4c4e-aa4d-4d10afd1b908" x="226" y="210" width="62" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Toplam(*)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="f3ebaec2-869a-4123-9dfa-e349be024b65" x="393" y="210" width="209" height="30"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="85699302-53b2-437c-9abf-4f4573e647a2" x="50" y="240" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="5fa5712f-4691-4e07-9e5c-90f588f460a4" x="393" y="240" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="a1308c32-5fff-4eb9-92d8-70b5efb77b7c" x="185" y="240" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="1952c787-e6e0-4569-a5c8-9fec1c7adc19" x="287" y="210" width="65" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Kamulaştırma]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="1cadce22-88c4-4d2b-ad51-9cb5b2468849" x="393" y="210" width="100" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Toplam(*)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="9887c73c-fbd3-4ce2-b584-4da940f8a9dc" x="492" y="210" width="110" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Kamulaştırma]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="ac9ff6ad-5d7f-4744-b485-d57379dbbe34" x="50" y="260" width="552" height="27"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Yıllar İtibarıyla Yapılan Harcama(**)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="c256428f-d958-4e83-a1ca-ff8fa91abfc1" x="50" y="327" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Justified" verticalAlignment="Middle">
+                    <font isBold="false" isItalic="true"/>
+                </textElement>
+                <text><![CDATA[  Programa Alındığı Yıl (2017)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="3ab3efd8-7b86-4871-a84a-b26d82ef176a" x="50" y="307" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="7a0949ca-1f79-4068-9f94-7ca7a0eeeac8" x="393" y="347" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="71d157e9-46d8-451b-8777-b846c976fe39" x="185" y="287" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Cari Fiyatlarla]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="7b2e2767-aada-4ebf-b745-f88b8ad993ca" x="50" y="347" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font isBold="false" isItalic="true"/>
+                </textElement>
+                <text><![CDATA[2018     ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="2adba04d-ca9b-4a71-b79a-01851a91f1df" x="393" y="307" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="90e1d766-fe25-4f7e-be84-0e89d81d8a87" x="393" y="287" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[2018 Yılı Fiyatlarıyla ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="b2db9caa-6564-4552-b7e5-d93cde381b84" x="185" y="347" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="70fc36a6-a2fa-4b57-bbba-b3bfdc9e154b" x="185" y="307" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="de640adc-94d5-4aca-951e-cd23ba3d822f" x="50" y="287" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement/>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="6747cb62-a6be-494f-a05a-1ffdbeada4b1" x="185" y="367" width="208" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="e6061530-1237-4270-b694-2c2bd63c68f1" x="50" y="367" width="135" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font isBold="false" isItalic="true"/>
+                </textElement>
+                <text><![CDATA[2019     ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="87840a8a-031b-4a66-b0c3-b72f2481aba9" x="393" y="367" width="209" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="9acf22be-6ce7-49e6-a928-2fc215402ce2" x="434" y="307" width="59" height="20"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Toplam(*)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="5a7eecee-c1ac-4e60-bcbc-2141992ff117" x="492" y="307" width="110" height="20"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Kamulaştırma]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="985d383f-efaf-4bf2-9b0e-e61894f58260" x="351" y="210" width="42" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Dış]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="2a473d74-631a-46c2-abb1-b2924b5541c0" x="393" y="307" width="42" height="20"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Dış]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="7e3423a4-323a-4e32-8d55-498bef3b230c" x="284" y="307" width="110" height="20"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Kamulaştırma]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="6a5d7b73-a958-49f9-8c74-b3e6d8ca9238" x="185" y="307" width="42" height="20"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Dış]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="a010d3d2-187e-49b2-ae5a-6712827a585e" x="226" y="307" width="59" height="20"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Toplam(*)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="9c58c9e2-911c-4bd7-ba05-1a9b18b94174" x="50" y="387" width="552" height="27"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                    <topPen lineWidth="0.5"/>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Ulaşılan Sonuçlar, Karşılaşılan Sorunlar, Getirilen Çözümler, Çıkarılan Dersler]]></text>
+            </staticText>
+            <textField>
+                <reportElement uuid="0df37734-a2eb-4d08-b867-6652aaa555e1" x="184" y="414" width="418" height="33"/>
+                <box>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement uuid="542f6e80-5d24-48ab-aeaf-d47ae905e6ec" x="184" y="447" width="418" height="33"/>
+                <box>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+            </textField>
+            <staticText>
+                <reportElement uuid="fe780c4d-37ae-4cf3-9f09-a5cdae3db4ae" x="50" y="447" width="135" height="33"/>
+                <box>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[   Projeden Beklenen ve Elde Edilen Faydalar]]></text>
+            </staticText>
+            <textField>
+                <reportElement uuid="4f413126-dd85-4560-acd1-8f26af284696" x="184" y="480" width="418" height="69"/>
+                <box>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+            </textField>
+            <staticText>
+                <reportElement uuid="6599502f-2be0-445c-b276-d334de7f27cc" x="50" y="480" width="135" height="69"/>
+                <box>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[ Projenin Kalkınma Eksenleri ve Sektörel Plan Hedefleriyle İlişkisi ve Katkısı]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="0880f1dc-e672-43a5-a56a-594aa2cfeeab" x="50" y="549" width="135" height="69"/>
+                <box>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Yapılan İşler, Uygulamada Karşılaşılan Sorunlar, Nedenleri ve Nasıl Çözüldüğü]]></text>
+            </staticText>
+            <textField>
+                <reportElement uuid="2b60b6b4-6d36-4b53-a797-d1e798653f8e" x="184" y="549" width="418" height="69"/>
+                <box>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+            </textField>
+            <staticText>
+                <reportElement uuid="9b7e5de2-55a2-48f9-a16a-951ad71d52c1" x="50" y="414" width="135" height="33"/>
+                <box>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[ Projenin Çıktısı/Sonucu   (Ürünü)]]></text>
+            </staticText>
+            <textField>
+                <reportElement uuid="88eebc4d-9f2d-4c9d-9a8a-5326c568b813" x="184" y="618" width="418" height="33"/>
+                <box>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+            </textField>
+            <staticText>
+                <reportElement uuid="df5dcc90-8e1e-4a5a-a97f-50d5f0d26e29" x="50" y="618" width="135" height="33"/>
+                <box>
+                    <leftPen lineWidth="0.5"/>
+                    <bottomPen lineWidth="0.5"/>
+                    <rightPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Geleceğe İlişkin Çıkarılan Dersler]]></text>
+            </staticText>
+            <textField>
+                <reportElement uuid="3494857b-4a5c-437a-8069-5005c05c8692" x="185" y="327" width="209" height="20"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+            </textField>
+            <textField>
+                <reportElement uuid="12aceb6e-f133-4840-b929-2545375ba7c9" x="393" y="327" width="209" height="20"/>
+                <box>
+                    <leftPen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="42" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>

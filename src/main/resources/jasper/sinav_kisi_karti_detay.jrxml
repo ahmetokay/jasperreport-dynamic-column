@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sinav_detay" printOrder="Horizontal" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb0b1be1-7c64-47a8-85c6-fb278121ab5f">
+	<property name="ireport.zoom" value="1.9487171000000316"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="49"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="barcode" class="java.awt.Image"/>
+	<parameter name="backlogo" class="java.awt.Image"/>
+	<parameter name="dogrulamaKodu" class="java.lang.String"/>
+	<parameter name="sinavKisaKod" class="java.lang.String"/>
+	<parameter name="sinavAdayGrupSinavCesitAdi" class="java.lang.String"/>
+	<parameter name="sinavAdi" class="java.lang.String"/>
+	<parameter name="sinavYapanKurumAdi" class="java.lang.String"/>
+	<parameter name="sinavTarihi" class="java.util.Date"/>
+	<parameter name="sinavStatuAdi" class="java.lang.String"/>
+	<parameter name="sonucPuan" class="java.lang.Integer"/>
+	<parameter name="sonucAciklanmaTarihi" class="java.util.Date"/>
+	<parameter name="sonucAciklama" class="java.lang.String"/>
+	<parameter name="sonucKatilimDurumAdi" class="java.lang.String"/>
+	<parameter name="sonucGecerlilikDurumAdi" class="java.lang.String"/>
+	<parameter name="sonucBasariDurumAdi" class="java.lang.String"/>
+	<parameter name="kimlikNo" class="java.lang.Long"/>
+	<parameter name="kisiAd" class="java.lang.String"/>
+	<parameter name="kisiSoyad" class="java.lang.String"/>
+	<parameter name="mahkeme" class="java.lang.String"/>
+	<background>
+		<band height="802">
+			<image>
+				<reportElement uuid="15c3c1f5-12a8-4082-9d1e-e796f332d97c" x="-1" y="0" width="555" height="802"/>
+				<imageExpression><![CDATA[$P{backlogo}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="308">
+			<staticText>
+				<reportElement uuid="cbb5b027-8671-4024-b475-99ea08a67b0f" x="0" y="272" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Mahkeme ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="90ab6576-993d-4f9b-a988-96b8c5580f12" x="0" y="290" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Açıklama]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e2c0fd2a-dc70-4e3f-bc9e-91dd1d082aff" x="189" y="80" width="366" height="12"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM, yyyy / HH:mm.ss", new Locale("tr")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="149ab911-d3cc-4334-bf84-b19b4a87aabf" x="0" y="0" width="190" height="92"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="41929512-f0e8-4683-af37-860d5ee4f5c6" x="190" y="0" width="180" height="80" forecolor="#F20000"/>
+				<box bottomPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Kişi Detayı]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="47345d18-9c8c-4c61-8ac3-0a0373a6f638" x="173" y="146" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sinavYapanKurumAdi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="bc9613ad-9a1c-40b5-9416-8edffad187cc" x="169" y="164" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8c08c0d8-7fd1-4842-b41d-1b05f823b757" x="173" y="92" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sinavKisaKod}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="33212750-8bdf-40ce-8a59-502fc6d662db" x="0" y="164" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Tarihi]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="4ec9a5e0-84fd-4fa0-a3c9-ea534ee69eb4" x="173" y="164" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sinavTarihi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ca944264-10db-4c24-ab62-195866ce64ce" x="169" y="146" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e8afd6ac-460e-48b3-9dd3-c25adb420697" x="0" y="110" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Çeşidi Adı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2fa83e2a-44c8-4c54-b529-c140134bcb89" x="0" y="128" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Adı]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b7592059-32ba-4d54-99ba-925de95889bd" x="173" y="110" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sinavAdayGrupSinavCesitAdi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5dab1de8-9b74-41c7-9445-8f5528d37d52" x="169" y="128" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71838def-0509-4bb7-ba41-0ea8233bfe52" x="169" y="92" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d1067a44-38d9-4654-aab9-a0ba098863cd" x="0" y="92" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Kısa Kod]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d7d81829-a18b-4557-a6ba-d26173193563" x="173" y="128" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sinavAdi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b7844887-fcbf-4303-b45f-b67a194893db" x="0" y="146" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınavı Yapan Kurum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="22761982-b042-479a-b7ab-d009ad31abda" x="169" y="110" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b332a5af-055c-4180-8941-c02baddc6a6b" x="169" y="254" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="22d9f41f-c1f7-41d3-9fac-bedb9db38e0a" x="169" y="236" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="7dbf8157-f892-4ae8-8e43-63869c788ead" x="173" y="254" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sonucGecerlilikDurumAdi}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="bd13a686-f0e2-4d80-b954-3698e1495cde" x="173" y="200" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sonucAciklanmaTarihi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d246555e-ca15-420e-b071-04b5abb61bee" x="169" y="218" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="76f0fe96-42e1-4cae-a666-f6208bc2486c" x="173" y="182" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sonucKatilimDurumAdi}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="70e057b2-fee7-4701-a4b0-314a2ad87258" x="173" y="218" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sonucBasariDurumAdi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7d66ae16-f9c5-410b-b0f1-ed71693bb596" x="169" y="182" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="4837a27c-4488-4f71-8891-82402ca5cd30" x="173" y="236" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sonucPuan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b68023dc-9c20-4dc3-9062-2a327dc86ba9" x="169" y="200" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61ad343b-4729-4405-af20-a7c18c6abaee" x="0" y="182" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınava Katılım Durumu
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="596019b4-3814-4286-89a6-2563360e4bd0" x="0" y="236" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Puanı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bd3be266-6baa-4545-ab46-9d2f32611ef0" x="0" y="254" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Aday Sınav Geçerlilik Durumu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3d72a57e-daf0-49e9-91b5-090557447d1c" x="0" y="218" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Başarı Durumu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4041fc63-7c03-42b5-a13b-e79e50095633" x="0" y="200" width="170" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Sınav Sonuç Tarihi]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="34defda7-6aff-409f-84ef-6b7f96e19a93" x="173" y="290" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sonucAciklama}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b34f2ec5-b43e-4c4b-9bc6-98cbc1b90a40" x="173" y="272" width="382" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+			</textField>
+			<staticText>
+				<reportElement uuid="ed027e7d-8d79-4373-b611-ea0c418eed51" x="169" y="272" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="41c4c30b-9d5f-422d-9486-b60dde0a0bc8" x="169" y="290" width="5" height="18"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="88">
+			<textField>
+				<reportElement uuid="bb7fff5e-fc94-46c2-98f5-66804a1594d4" x="454" y="68" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c99864fa-eb4e-44a3-b347-f142d0dc1a46" x="0" y="0" width="455" height="88"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font size="7" pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA["T.C. AİLE, ÇALIŞMA VE SOSYAL HİZMETLER BAKANLIĞI - İŞ SAĞLIĞI VE GÜVENLİĞİ GENEL MÜDÜRLÜĞÜ" +"<br>"+
+
+"İş Sağlığı ve Güvenliği Kayıt, Takip ve İzleme Programı - İSG-KATİP - v9.19.01.10"
+
++ "<br>" + "İş Bu Belge İsg-Katip Üzerinden " +$P{dogrulamaKodu}+ " Doğrulama Kodu ile Alınmıştır."]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
